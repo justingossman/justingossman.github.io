@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Almondos × FCMO — Ad Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0a0a0a; --panel:#141414; --ink:#f5f0e8; --muted:#8a8580; --line:#26221f; --red:#98001b; --red-hot:#c8102e; --cream:#f5efe4; --wasabi:#7a8f3f; --buffalo:#d24e1d; --sv-blue:#4a90a4; box-sizing:border-box; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,-apple-system,sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1100px; margin:0 auto; padding:80px 32px 120px; }
+  @media (max-width:640px) { .wrap { padding:48px 20px 80px; } }
+  header.masthead { border-bottom:1px solid var(--line); padding-bottom:40px; margin-bottom:80px; }
+  .eyebrow { font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--muted); margin-bottom:20px; font-weight:600; }
+  h1 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-size:clamp(40px,6vw,64px); line-height:1.05; letter-spacing:-0.02em; margin:0 0 24px; }
+  h1 em { font-style:italic; color:var(--red-hot); }
+  .lede { font-size:17px; line-height:1.55; color:var(--muted); max-width:620px; margin:0; }
+  .lede strong { color:var(--ink); font-weight:500; }
+  section.concept { margin-bottom:100px; }
+  .concept-header { display:flex; align-items:baseline; justify-content:space-between; gap:24px; padding-bottom:20px; margin-bottom:32px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  .concept-num { font-family:'Instrument Serif',Georgia,serif; font-size:40px; font-style:italic; color:var(--red-hot); line-height:1; }
+  .concept-title { font-size:22px; font-weight:600; margin:0; letter-spacing:-0.01em; }
+  .concept-tag { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+  @media (max-width:820px) { .grid { grid-template-columns:1fr; gap:32px; } }
+  .ad { aspect-ratio:4/5; width:100%; max-width:440px; margin:0 auto; position:relative; overflow:hidden; border-radius:12px; box-shadow:0 40px 80px -20px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.04); }
+  .ad-inner { position:absolute; inset:0; display:flex; flex-direction:column; padding:40px 32px; }
+  .ad-1 { background:linear-gradient(160deg,#e8eef1 0%,#b8ccd4 100%); color:#0a1e28; }
+  .ad-1 .kicker { font-size:12px; letter-spacing:0.28em; text-transform:uppercase; font-weight:700; color:var(--sv-blue); margin-bottom:auto; }
+  .ad-1 .hook { font-family:'Instrument Serif',Georgia,serif; font-size:clamp(38px,8vw,56px); line-height:0.95; letter-spacing:-0.03em; font-weight:400; margin:0 0 20px; }
+  .ad-1 .hook em { font-style:italic; }
+  .ad-1 .hook s { text-decoration-thickness:3px; text-decoration-color:var(--red-hot); }
+  .ad-1 .sub { font-size:14px; line-height:1.4; font-weight:500; margin:0 0 24px; max-width:260px; }
+  .ad-1 .cta { display:inline-block; background:#0a1e28; color:#fff; padding:12px 20px; border-radius:999px; font-size:13px; font-weight:600; align-self:flex-start; }
+  .ad-1 .brand { position:absolute; top:32px; right:32px; font-family:'Instrument Serif',Georgia,serif; font-size:20px; font-style:italic; color:#0a1e28; }
+  .ad-1 .stat { position:absolute; bottom:32px; right:32px; text-align:right; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; opacity:0.6; }
+  .ad-2 { background:#0d1408; color:#f0e8d4; }
+  .ad-2::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 30% 20%,rgba(122,143,63,0.35) 0%,transparent 60%); }
+  .ad-2 .kicker { font-size:12px; letter-spacing:0.28em; text-transform:uppercase; font-weight:700; color:var(--wasabi); position:relative; margin-bottom:auto; }
+  .ad-2 .hook { font-family:'Instrument Serif',Georgia,serif; font-size:clamp(40px,9vw,62px); line-height:0.95; letter-spacing:-0.02em; font-weight:400; margin:0 0 20px; position:relative; }
+  .ad-2 .hook em { font-style:italic; color:var(--wasabi); }
+  .ad-2 .sub { font-size:14px; line-height:1.5; color:#b5b09f; margin:0 0 24px; max-width:280px; position:relative; }
+  .ad-2 .cta { display:inline-block; background:var(--wasabi); color:#0d1408; padding:12px 20px; border-radius:999px; font-size:13px; font-weight:700; align-self:flex-start; position:relative; }
+  .ad-2 .brand { position:absolute; top:32px; right:32px; font-family:'Instrument Serif',Georgia,serif; font-size:20px; font-style:italic; color:#f0e8d4; opacity:0.9; }
+  .ad-2 .stat { position:absolute; bottom:32px; right:32px; text-align:right; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:#b5b09f; }
+  .ad-3 { background:linear-gradient(180deg,var(--red) 0%,#6b0013 100%); color:#f5efe4; }
+  .ad-3 .kicker { font-size:12px; letter-spacing:0.28em; text-transform:uppercase; font-weight:700; opacity:0.75; margin-bottom:auto; }
+  .ad-3 .hook { font-family:'Inter',sans-serif; font-size:clamp(42px,9vw,62px); line-height:0.9; letter-spacing:-0.04em; font-weight:900; margin:0 0 20px; text-transform:uppercase; }
+  .ad-3 .hook span { display:block; font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-style:italic; text-transform:none; letter-spacing:-0.02em; color:#f0d68a; font-size:0.6em; margin-top:4px; }
+  .ad-3 .sub { font-size:14px; line-height:1.5; opacity:0.85; margin:0 0 24px; max-width:280px; }
+  .ad-3 .cta { display:inline-block; background:#f5efe4; color:var(--red); padding:12px 20px; border-radius:999px; font-size:13px; font-weight:700; align-self:flex-start; }
+  .ad-3 .brand { position:absolute; top:32px; right:32px; font-family:'Instrument Serif',Georgia,serif; font-size:20px; font-style:italic; opacity:0.9; }
+  .ad-3 .stat { position:absolute; bottom:32px; right:32px; text-align:right; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; opacity:0.65; }
+  .notes h3 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-size:28px; letter-spacing:-0.01em; margin:0 0 20px; line-height:1.15; }
+  .notes p { font-size:15px; line-height:1.6; color:#c8c2b8; margin:0 0 18px; }
+  .notes p strong { color:var(--ink); font-weight:600; }
+  .notes ul { list-style:none; padding:0; margin:24px 0 0; border-top:1px solid var(--line); padding-top:20px; }
+  .notes li { font-size:13px; line-height:1.5; padding:10px 0; border-bottom:1px solid var(--line); display:flex; gap:16px; }
+  .notes li b { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); font-weight:600; min-width:90px; padding-top:3px; }
+  .notes li span { color:#c8c2b8; flex:1; }
+  .close { border-top:1px solid var(--line); padding-top:48px; margin-top:40px; }
+  .close h2 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-size:clamp(32px,5vw,44px); letter-spacing:-0.02em; margin:0 0 24px; line-height:1.1; }
+  .close p { font-size:16px; line-height:1.6; color:#c8c2b8; max-width:620px; margin:0 0 16px; }
+  .sig { margin-top:48px; font-size:14px; color:var(--muted); }
+  .sig .name { font-family:'Instrument Serif',Georgia,serif; font-size:22px; font-style:italic; color:var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="eyebrow">Concept round · Prepared for Almondos California Co.</div>
+    <h1>Three ways to make almonds <em>impossible to scroll past.</em></h1>
+    <p class="lede">Almondos already has the hardest part solved — <strong>a bold brand, real product, real story.</strong> What's missing is paid creative that stops the thumb. Below are three feed-ready concepts, each built around a single sharp hook. Any one of them can ship this week.</p>
+  </header>
+
+  <section class="concept">
+    <div class="concept-header">
+      <div style="display:flex;align-items:baseline;gap:20px;"><div class="concept-num">01</div><h2 class="concept-title">The chip killer</h2></div>
+      <div class="concept-tag">Salt &amp; Vinegar · Meta feed 4:5</div>
+    </div>
+    <div class="grid">
+      <div class="ad ad-1"><div class="ad-inner">
+        <div class="kicker">Salt &amp; Vinegar</div><div class="brand">Almondos</div>
+        <h3 class="hook">Eat like a <s>chip</s>. <em>Snack like an athlete.</em></h3>
+        <p class="sub">Same tang. Same crunch. 6g of protein instead of a food coma.</p>
+        <a class="cta">Shop Salt &amp; Vinegar →</a>
+        <div class="stat">2.5oz · $5.99</div>
+      </div></div>
+      <div class="notes">
+        <h3>Position against the chip aisle, not the nut aisle.</h3>
+        <p>Almonds compete with pistachios today. That's a small fight. The real prize is the <strong>chip shopper</strong> — someone reaching for salt &amp; vinegar Kettle chips and open to a swap if the flavor lands.</p>
+        <p>This ad frames the choice for them: same craving, better outcome. The strikethrough does 90% of the persuasion work in half a second — perfect for a thumb-stopping feed unit.</p>
+        <ul>
+          <li><b>Target</b><span>Chip buyers 25-44, high-protein / keto / heart-healthy interest stack</span></li>
+          <li><b>Placement</b><span>Instagram feed, Reels, Facebook feed</span></li>
+          <li><b>Hook test</b><span>3 variants: "chip killer", "chip replacement", "the chip you can eat by the handful"</span></li>
+          <li><b>KPI</b><span>CTR &gt; 1.5%, CPA &lt; $18 on a $5.99 SKU (via bundle upsell)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="concept">
+    <div class="concept-header">
+      <div style="display:flex;align-items:baseline;gap:20px;"><div class="concept-num">02</div><h2 class="concept-title">The unexpected pairing</h2></div>
+      <div class="concept-tag">Wasabi &amp; Soy · Meta feed 4:5</div>
+    </div>
+    <div class="grid">
+      <div class="ad ad-2"><div class="ad-inner">
+        <div class="kicker">Wasabi &amp; Soy</div><div class="brand">Almondos</div>
+        <h3 class="hook">Sushi's favorite side<br><em>is now the snack.</em></h3>
+        <p class="sub">The heat of wasabi. The umami of soy. On an almond that finally holds the flavor.</p>
+        <a class="cta">Try Wasabi &amp; Soy →</a>
+        <div class="stat">Vegan · Keto · 6g protein</div>
+      </div></div>
+      <div class="notes">
+        <h3>Ride a flavor people already crave.</h3>
+        <p>Wasabi &amp; Soy is the highest-intent flavor in the lineup — anyone who orders sushi knows exactly what it tastes like before they click. That means <strong>lower education cost, higher conversion.</strong></p>
+        <p>The dark, editorial treatment separates Almondos from every neon-yellow snack bag in the feed. It signals premium, which justifies the $5.99 price point without a single word about price.</p>
+        <ul>
+          <li><b>Target</b><span>Sushi delivery orderers, Trader Joe's buyers, 28-45, urban US</span></li>
+          <li><b>Placement</b><span>Instagram feed + Stories, Pinterest, TikTok Spark</span></li>
+          <li><b>Hook test</b><span>"Sushi's favorite side", "wasabi peas grew up", "the almond, upgraded"</span></li>
+          <li><b>KPI</b><span>Add-to-cart rate &gt; 4%, ROAS 2.5x on cold traffic within 14 days</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="concept">
+    <div class="concept-header">
+      <div style="display:flex;align-items:baseline;gap:20px;"><div class="concept-num">03</div><h2 class="concept-title">The bold California play</h2></div>
+      <div class="concept-tag">Buffalo · Meta feed 4:5</div>
+    </div>
+    <div class="grid">
+      <div class="ad ad-3"><div class="ad-inner">
+        <div class="kicker">Buffalo</div><div class="brand">Almondos</div>
+        <h3 class="hook">Wing night.<br>Zero mess.<span>Buffalo, bagged.</span></h3>
+        <p class="sub">All the heat of a wing platter. None of the napkins.</p>
+        <a class="cta">Grab Buffalo →</a>
+        <div class="stat">California grown · Small batch</div>
+      </div></div>
+      <div class="notes">
+        <h3>Lean all the way into California.</h3>
+        <p>Every other almond brand hides behind pastel bags and soft copy. Almondos already went the opposite direction — <strong>red, bold, bear-on-the-flag energy.</strong> The ads should double down on that, not soften it.</p>
+        <p>Buffalo is the volume flavor. It's the one that ends up on game-day platters, at tailgates, in the bowl at the party. That's the story this ad tells — position the bag where the wings usually go.</p>
+        <ul>
+          <li><b>Target</b><span>Sports interest, game-day snack buyers, 25-54, US-wide</span></li>
+          <li><b>Placement</b><span>Feed, Reels, connected TV cutdowns (15s)</span></li>
+          <li><b>Hook test</b><span>"wings without the mess", "the tailgate almond", "buffalo, bagged"</span></li>
+          <li><b>KPI</b><span>Bundle attach rate &gt; 30% (buffalo tends to sell with salt &amp; vinegar)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="close">
+    <h2>What ships in the first 30 days.</h2>
+    <p>Three concepts above become <strong>nine creative variants</strong> — three hooks per concept — plus 15-second Reels cutdowns of the top two performers. Full-funnel setup: cold prospecting on the winning hook, warm retargeting on bundle offers, catalog remarketing on cart abandoners.</p>
+    <p>The store is already dialed. The brand is already loud. The only thing missing is paid distribution that matches the ambition of the packaging.</p>
+    <div class="sig">
+      <div class="name">Justin Gossman</div>
+      <div style="margin-top:4px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;">FCMO · Fractional CMO</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
