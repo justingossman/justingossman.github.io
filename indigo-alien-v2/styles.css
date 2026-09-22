@@ -322,3 +322,151 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
   text-transform:uppercase; color:var(--faint); margin-top:26px; }
 .contact-info dd{ margin:8px 0 0; font-family:var(--serif); font-size:20px; color:var(--ink); }
 @media (max-width:800px){ .contact-grid{ grid-template-columns:1fr; } }
+
+/* ============================================================================
+   HYBRID FILL — no slot reads empty
+   EDITORIAL slots: CSS-only cosmic/macro textures (no external images).
+   B&W diptych + ingredient stay strictly monochrome; the four colour cosmic
+   slots carry a restrained indigo undertone. Each slot is distinct; the six
+   diptych textures are built in mirrored pairs so each pair reads as a pair.
+   `.slot.sx-*` (0,2,0) intentionally overrides `.slot--mono/--cosmos` (0,1,0).
+   ============================================================================ */
+
+/* — Pair I · Neuron / Galaxy filament (branching web, mirrored corners) — */
+.slot.sx-neuron{
+  background-color:#0a0a0b;
+  background-image:
+    radial-gradient(closest-side at 30% 28%, rgba(255,255,255,0.30), rgba(255,255,255,0.05) 45%, transparent 72%),
+    repeating-conic-gradient(from 12deg at 30% 28%, rgba(255,255,255,0.05) 0deg 1.6deg, transparent 1.6deg 8deg),
+    radial-gradient(1px 1px at 18px 30px, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 70px 90px, rgba(255,255,255,0.22), transparent),
+    linear-gradient(200deg,#161618,#0a0a0b 80%);
+  background-size:auto,auto,120px 120px,170px 170px,auto;
+}
+.slot.sx-galaxy{
+  background-color:#0a0a0b;
+  background-image:
+    radial-gradient(closest-side at 70% 72%, rgba(255,255,255,0.30), rgba(255,255,255,0.05) 45%, transparent 72%),
+    repeating-conic-gradient(from 12deg at 70% 72%, rgba(255,255,255,0.05) 0deg 1.6deg, transparent 1.6deg 8deg),
+    radial-gradient(1px 1px at 40px 20px, rgba(255,255,255,0.30), transparent),
+    radial-gradient(1px 1px at 90px 80px, rgba(255,255,255,0.20), transparent),
+    linear-gradient(200deg,#151517,#0a0a0b 80%);
+  background-size:auto,auto,140px 140px,190px 190px,auto;
+}
+
+/* — Pair II · Iris / Nebula (radial burst from centre) — */
+.slot.sx-iris{
+  background-color:#0a0a0b;
+  background-image:
+    radial-gradient(circle at 50% 50%, #050506 7%, transparent 8%),
+    repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,255,255,0.12) 0deg 1.2deg, transparent 1.2deg 4.2deg),
+    radial-gradient(circle at 50% 50%, transparent 52%, rgba(255,255,255,0.12) 60%, transparent 66%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.10), transparent 55%),
+    linear-gradient(200deg,#141416,#0a0a0b 85%);
+}
+.slot.sx-nebula{
+  background-color:#0a0a0b;
+  background-image:
+    radial-gradient(40% 32% at 46% 44%, rgba(255,255,255,0.22), transparent 70%),
+    radial-gradient(55% 45% at 56% 58%, rgba(255,255,255,0.12), transparent 72%),
+    radial-gradient(1px 1px at 30px 40px, rgba(255,255,255,0.32), transparent),
+    radial-gradient(1px 1px at 96px 110px, rgba(255,255,255,0.20), transparent),
+    linear-gradient(200deg,#141416,#0a0a0b 85%);
+  background-size:auto,auto,150px 150px,210px 210px,auto;
+}
+
+/* — Pair III · Tree roots / Blood vessels (vertical branching, mirrored) — */
+.slot.sx-roots{
+  background-color:#0a0a0b;
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,0.16), transparent 55%),
+    repeating-linear-gradient(200deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(158deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 26px),
+    linear-gradient(200deg,#151517,#0a0a0b 82%);
+}
+.slot.sx-vessels{
+  background-color:#0a0a0b;
+  background-image:
+    linear-gradient(0deg, rgba(255,255,255,0.15), transparent 55%),
+    repeating-linear-gradient(160deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(202deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 26px),
+    linear-gradient(200deg,#151517,#0a0a0b 82%);
+}
+
+/* — IMG-17 · Ingredient origin (B&W crystalline macro) — */
+.slot.sx-ingredient{
+  background-color:#0a0a0b;
+  background-image:
+    repeating-conic-gradient(from 30deg at 38% 42%, rgba(255,255,255,0.08) 0deg 8deg, rgba(0,0,0,0) 8deg 22deg),
+    radial-gradient(closest-side at 62% 60%, rgba(255,255,255,0.16), transparent 70%),
+    linear-gradient(200deg,#151517,#0a0a0b 82%);
+}
+
+/* — Colour cosmic slots (restrained indigo undertone) — */
+.slot.sx-banner{
+  background-color:#0a0a0e;
+  background-image:
+    radial-gradient(60% 120% at 22% 40%, rgba(61,47,114,0.55), transparent 60%),
+    radial-gradient(50% 100% at 78% 62%, rgba(90,60,150,0.32), transparent 62%),
+    radial-gradient(1px 1px at 30px 40px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 120px 90px, rgba(255,255,255,0.28), transparent),
+    linear-gradient(200deg,#0e0c18,#08070d 85%);
+  background-size:auto,auto,160px 160px,240px 240px,auto;
+}
+.slot.sx-ritual{
+  background-color:#0a0a0e;
+  background-image:
+    radial-gradient(70% 110% at 12% 50%, rgba(70,52,128,0.5), transparent 62%),
+    radial-gradient(40% 60% at 70% 30%, rgba(120,90,190,0.22), transparent 65%),
+    radial-gradient(1px 1px at 50px 60px, rgba(255,255,255,0.4), transparent),
+    linear-gradient(200deg,#0e0c18,#08070d 85%);
+  background-size:auto,auto,200px 200px,auto;
+}
+.slot.sx-belief{
+  background-color:#0a0a0e;
+  background-image:
+    radial-gradient(60% 80% at 66% 44%, rgba(74,54,132,0.5), transparent 62%),
+    radial-gradient(40% 55% at 30% 66%, rgba(120,90,190,0.20), transparent 66%),
+    radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.4), transparent),
+    linear-gradient(200deg,#0e0c18,#08070d 85%);
+  background-size:auto,auto,220px 220px,auto;
+}
+.slot.sx-contact{
+  background-color:#0a0a0e;
+  background-image:
+    radial-gradient(90% 60% at 50% 22%, rgba(74,54,132,0.5), transparent 60%),
+    radial-gradient(70% 50% at 50% 82%, rgba(60,44,110,0.3), transparent 66%),
+    radial-gradient(1px 1px at 60px 50px, rgba(255,255,255,0.4), transparent),
+    linear-gradient(200deg,#0e0c18,#08070d 85%);
+  background-size:auto,auto,200px 200px,auto;
+}
+
+/* ============================================================================
+   STAND-IN slots — PRODUCT & MODELING hold full-colour placeholder images
+   from ~/Desktop/kourtneyassets until licensed originals land. No dimming
+   treatment: image renders at full quality; a diagonal watermark band sits
+   above it so it cannot be mistaken for final art. Sources pre-cropped so
+   any baked-in text / watermark is out of frame.
+   ============================================================================ */
+.slot--standin{ isolation:isolate; }
+.slot--standin .slot-meta{ display:none; }          /* image reads; id lives in the band */
+.slot-img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;
+}
+.slot--standin .slot-grain{ display:none; }          /* grain off — full-quality image */
+/* diagonal watermark band — unmistakably an overlay, never part of the photo */
+.slot-standin{
+  position:absolute; left:50%; top:50%; z-index:3;
+  transform:translate(-50%,-50%) rotate(-12deg);
+  width:170%; padding:12px 24px; text-align:center;
+  background:rgba(38,27,78,0.66);
+  border-top:1px solid rgba(255,255,255,0.45); border-bottom:1px solid rgba(255,255,255,0.45);
+  font-family:var(--mono); font-size:11px; line-height:1.7; letter-spacing:0.2em;
+  text-transform:uppercase; color:#fff; pointer-events:none;
+}
+.slot-standin b{ display:block; font-weight:400; font-size:9px;
+  color:rgba(255,255,255,0.7); letter-spacing:0.28em; margin-bottom:4px; }
+@media (max-width:640px){
+  /* narrower content column so the message wraps to two centred lines instead of clipping */
+  .slot-standin{ width:140%; font-size:10px; letter-spacing:0.14em; padding:10px 21%; line-height:1.6; }
+}
