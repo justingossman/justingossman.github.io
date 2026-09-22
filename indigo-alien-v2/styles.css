@@ -452,3 +452,35 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
   position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;
 }
 .slot--standin .slot-grain{ display:none; }          /* grain off — full-quality image */
+
+/* ============================================================================
+   HERO TAGLINE — "Beauty from Beyond"™
+   Iridescent editorial text fill (pale lavender / rose / mint / champagne)
+   with a very slow shimmer. Falls back to solid ink where background-clip:text
+   is unsupported; static gradient under prefers-reduced-motion.
+   ============================================================================ */
+.hero h1.tagline{
+  font-size:clamp(46px,10.5vw,138px); font-weight:500; line-height:0.95;
+  margin:24px 0 0;
+}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero h1.tagline{
+    background:linear-gradient(100deg,#d9c8ea 0%,#ecc9d6 26%,#c9e2d6 52%,#ead9bd 78%,#d9c8ea 100%);
+    background-size:220% 100%; background-position:0 0;
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; color:transparent;
+    animation:bfb-shimmer 22s linear infinite;
+  }
+}
+@keyframes bfb-shimmer{ to{ background-position:220% 0; } }
+@media (prefers-reduced-motion:reduce){
+  .hero h1.tagline{ animation:none; }
+}
+.tagline .tm{ font-size:0.32em; vertical-align:super; font-weight:400; line-height:1; }
+/* former headline, demoted to subheadline */
+.hero .subhead{
+  font-family:var(--serif); font-weight:300;
+  font-size:clamp(22px,3.2vw,42px); line-height:1.05;
+  text-transform:uppercase; letter-spacing:-0.005em;
+  color:var(--ink); margin:16px 0 0;
+}
