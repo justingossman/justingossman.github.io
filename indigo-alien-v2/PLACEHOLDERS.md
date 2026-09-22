@@ -10,19 +10,19 @@ Two fill strategies are in place:
   gradients + grain, no external images). The six diptych textures + the ingredient
   macro are strictly monochrome; the four colour cosmic slots carry a restrained indigo
   undertone. These are decorative stand-ins that read as "art direction," not final art.
-- **PRODUCT (3) + MODELING (4)** — filled with **full-colour, full-quality stand-in
-  photos** from `~/Desktop/kourtneyassets`, copied (pre-cropped to push any baked-in
-  text / watermark out of frame) into `img/standins/`. No dimming treatment and **no
-  on-page label** — the layout reads as a finished design. These 7 are **temporary
-  stand-ins tracked only in this file**; every one must be replaced with a licensed
-  original.
+- **PRODUCT (3) + MODELING (5)** — filled with **full-colour, full-quality stand-in
+  photos**: six pre-cropped from `~/Desktop/kourtneyassets` into `img/standins/`, plus
+  two client-supplied web-resolution photos of the founder in `img/photos/` (IMG-01
+  hero, IMG-19 founder portrait). No dimming treatment and **no on-page label** — the
+  layout reads as a finished design. These 8 are **temporary stand-ins tracked only in
+  this file**; every one must be replaced with a licensed full-resolution original.
 
 Types: **PRODUCT** (studio product shot) · **MODELING** (person / on-skin) ·
 **EDITORIAL** (macro nature & cosmic imagery, incl. the monochrome diptych).
 
 | ID     | Page          | Section                        | Type      | Rec. dimensions | Current fill                                   | Status        |
 |--------|---------------|--------------------------------|-----------|-----------------|------------------------------------------------|---------------|
-| IMG-01 | index.html    | Hero                           | MODELING  | 1200 × 1600 px  | Stand-in `standin-img01-modeling.jpg`          | ⚠ needs photo |
+| IMG-01 | index.html    | Hero                           | MODELING  | 1200 × 1600 px  | Client campaign shot `photos/ia-hero-kourtney.jpg` (web-res) | ⚠ original needed |
 | IMG-02 | index.html    | As Above, So Below — Pair I    | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-neuron` (B&W)                 | ◑ CSS temp    |
 | IMG-03 | index.html    | As Above, So Below — Pair I    | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-galaxy` (B&W, mirrors 02)     | ◑ CSS temp    |
 | IMG-04 | index.html    | As Above, So Below — Pair II   | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-iris` (B&W)                    | ◑ CSS temp    |
@@ -40,6 +40,7 @@ Types: **PRODUCT** (studio product shot) · **MODELING** (person / on-skin) ·
 | IMG-16 | about.html    | Belief row                     | EDITORIAL | 1600 × 1200 px  | CSS texture `.sx-belief` (indigo)              | ◑ CSS temp    |
 | IMG-17 | about.html    | Practice row                   | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-ingredient` (B&W)             | ◑ CSS temp    |
 | IMG-18 | contact.html  | Contact                        | EDITORIAL | 1200 × 1500 px  | CSS texture `.sx-contact` (indigo)             | ◑ CSS temp    |
+| IMG-19 | about.html    | Founder row (Meet Kourtney)    | MODELING  | 900 × 1200 px   | Client portrait `photos/ia-founder-kourtney.jpg` (web-res) | ⚠ original needed |
 
 Legend — **⚠ needs photo**: full-colour temporary stand-in in place (no on-page label),
 must be replaced with a licensed original. **◑ CSS temp**: CSS texture in place; replace
@@ -50,9 +51,9 @@ with final editorial imagery (or keep as intentional texture if art direction ap
 | Type      | Count | Fill                                  |
 |-----------|-------|---------------------------------------|
 | PRODUCT   | 3     | full-colour stand-ins (temporary)     |
-| MODELING  | 4     | full-colour stand-ins (temporary)     |
+| MODELING  | 5     | full-colour stand-ins (temporary)     |
 | EDITORIAL | 11    | CSS textures                          |
-| **Total** | **18**| 0 empty                               |
+| **Total** | **19**| 0 empty                               |
 
 ## Stand-in provenance (`img/standins/`)
 
@@ -63,7 +64,6 @@ original.**
 
 | Stand-in file                | Slot   | Source (kourtneyassets)                         |
 |------------------------------|--------|-------------------------------------------------|
-| standin-img01-modeling.jpg   | IMG-01 | b878be50… (iridescent figure, cropped)          |
 | standin-img08-product.jpg    | IMG-08 | 70f5fe60… (bottle on amethyst, upper crop)      |
 | standin-img09-product.jpg    | IMG-09 | 70f5fe60… (hexagon product array, lower crop)   |
 | standin-img10-product.jpg    | IMG-10 | 1bdcab39… (dark jar tile, cropped)              |
@@ -71,12 +71,35 @@ original.**
 | standin-img14-modeling.jpg   | IMG-14 | e03719e2… (portrait panel, cropped below text)  |
 | standin-img15-modeling.jpg   | IMG-15 | b878be50… (bio-alchemy still-life panel, cropped)|
 
+## Client-supplied photos (`img/photos/`)
+
+Sent by the client on 2026-09-22 as web-resolution files (Instagram / screenshot
+quality). Fine for this private mockup; **not** store-grade — the full-resolution
+originals are needed before Shopify.
+
+| File                     | Slot   | Source / treatment                                                        |
+|--------------------------|--------|---------------------------------------------------------------------------|
+| ia-hero-kourtney.jpg     | IMG-01 | Campaign shot with jar (1170 × 2532 phone screenshot). Rounded corners and the baked-in "Indigo Alien Beauty" title removed; cropped to 1154 × 2106. |
+| ia-founder-kourtney.jpg  | IMG-19 | Clean portrait, 895 × 1200, used as-is.                                   |
+
+## Brand assets (`img/brand/`)
+
+`ia-logo-lockup.png` (wordmark + "BEAUTY FROM BEYOND") and `ia-logo-wordmark.png`
+(wordmark only) are white-on-transparent knockouts rebuilt from the client's Instagram
+cover screenshot (three stitched grid tiles). Clean at nav and masthead sizes; **replace
+with the designer's original vector / transparent PNG** for print and Shopify.
+
+## Background (`img/bg/`)
+
+`stars-far.svg` / `stars-near.svg` — generated star-field tiles behind every page
+(see STAR FIELD in styles.css). Final; no swap needed.
+
 ## To reach final
 
 1. **Product (IMG-08/09/10):** shoot the three SKUs (Rising Star Riche Crème, Starry Eye
    Serum, Galactic Oil Cleanser) at 900 × 1125, then drop into `img/products/` and swap
    the `<img src>` + remove the `slot--standin` class.
-2. **Modeling (IMG-01/13/14/15):** hero portrait + three on-skin ritual gestures.
+2. **Modeling (IMG-01/13/14/15/19):** hero, three on-skin ritual gestures, founder portrait — full-res originals of the two client shots, plus real photography for the ritual steps.
 3. **Editorial (IMG-02–07, 11, 12, 16, 17, 18):** real B&W macro pairs (neuron/galaxy,
    iris/nebula, roots/vessels), ingredient macro, and the colour cosmic features — or
    keep the CSS textures if approved. To swap: remove the `.sx-*` class and add an `<img>`.
@@ -84,5 +107,5 @@ original.**
 ### Breakdown by page
 - **index.html** — 11 (IMG-01 … IMG-11)
 - **rituals.html** — 4 (IMG-12 … IMG-15)
-- **about.html** — 2 (IMG-16, IMG-17)
+- **about.html** — 3 (IMG-16, IMG-17, IMG-19)
 - **contact.html** — 1 (IMG-18)
