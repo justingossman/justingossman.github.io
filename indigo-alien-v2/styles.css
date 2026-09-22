@@ -442,31 +442,13 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
 }
 
 /* ============================================================================
-   STAND-IN slots — PRODUCT & MODELING hold full-colour placeholder images
-   from ~/Desktop/kourtneyassets until licensed originals land. No dimming
-   treatment: image renders at full quality; a diagonal watermark band sits
-   above it so it cannot be mistaken for final art. Sources pre-cropped so
-   any baked-in text / watermark is out of frame.
+   STAND-IN slots — PRODUCT & MODELING hold full-colour temporary stand-in
+   images until licensed originals land. No overlay; provenance and swap
+   status are tracked in PLACEHOLDERS.md only.
    ============================================================================ */
 .slot--standin{ isolation:isolate; }
-.slot--standin .slot-meta{ display:none; }          /* image reads; id lives in the band */
+.slot--standin .slot-meta{ display:none; }          /* the image is the content */
 .slot-img{
   position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;
 }
 .slot--standin .slot-grain{ display:none; }          /* grain off — full-quality image */
-/* diagonal watermark band — unmistakably an overlay, never part of the photo */
-.slot-standin{
-  position:absolute; left:50%; top:50%; z-index:3;
-  transform:translate(-50%,-50%) rotate(-12deg);
-  width:170%; padding:12px 24px; text-align:center;
-  background:rgba(38,27,78,0.66);
-  border-top:1px solid rgba(255,255,255,0.45); border-bottom:1px solid rgba(255,255,255,0.45);
-  font-family:var(--mono); font-size:11px; line-height:1.7; letter-spacing:0.2em;
-  text-transform:uppercase; color:#fff; pointer-events:none;
-}
-.slot-standin b{ display:block; font-weight:400; font-size:9px;
-  color:rgba(255,255,255,0.7); letter-spacing:0.28em; margin-bottom:4px; }
-@media (max-width:640px){
-  /* narrower content column so the message wraps to two centred lines instead of clipping */
-  .slot-standin{ width:140%; font-size:10px; letter-spacing:0.14em; padding:10px 21%; line-height:1.6; }
-}

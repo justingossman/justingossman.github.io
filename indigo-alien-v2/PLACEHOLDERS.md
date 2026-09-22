@@ -12,10 +12,10 @@ Two fill strategies are in place:
   undertone. These are decorative stand-ins that read as "art direction," not final art.
 - **PRODUCT (3) + MODELING (4)** — filled with **full-colour, full-quality stand-in
   photos** from `~/Desktop/kourtneyassets`, copied (pre-cropped to push any baked-in
-  text / watermark out of frame) into `img/standins/`. No dimming treatment — the layout
-  reads as a finished design. Each carries a **diagonal watermark band** above the image
-  reading **"PLACEHOLDER — NOT FINAL. LICENSED ORIGINAL NEEDED."** so it cannot be
-  mistaken for final art.
+  text / watermark out of frame) into `img/standins/`. No dimming treatment and **no
+  on-page label** — the layout reads as a finished design. These 7 are **temporary
+  stand-ins tracked only in this file**; every one must be replaced with a licensed
+  original.
 
 Types: **PRODUCT** (studio product shot) · **MODELING** (person / on-skin) ·
 **EDITORIAL** (macro nature & cosmic imagery, incl. the monochrome diptych).
@@ -41,25 +41,25 @@ Types: **PRODUCT** (studio product shot) · **MODELING** (person / on-skin) ·
 | IMG-17 | about.html    | Practice row                   | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-ingredient` (B&W)             | ◑ CSS temp    |
 | IMG-18 | contact.html  | Contact                        | EDITORIAL | 1200 × 1500 px  | CSS texture `.sx-contact` (indigo)             | ◑ CSS temp    |
 
-Legend — **⚠ needs photo**: watermarked full-colour stand-in in place, must be replaced
-with a licensed original. **◑ CSS temp**: CSS texture in place; replace with final
-editorial imagery (or keep as intentional texture if art direction approves).
+Legend — **⚠ needs photo**: full-colour temporary stand-in in place (no on-page label),
+must be replaced with a licensed original. **◑ CSS temp**: CSS texture in place; replace
+with final editorial imagery (or keep as intentional texture if art direction approves).
 
 ## Totals
 
 | Type      | Count | Fill                                  |
 |-----------|-------|---------------------------------------|
-| PRODUCT   | 3     | full-colour stand-ins (watermarked)   |
-| MODELING  | 4     | full-colour stand-ins (watermarked)   |
+| PRODUCT   | 3     | full-colour stand-ins (temporary)     |
+| MODELING  | 4     | full-colour stand-ins (temporary)     |
 | EDITORIAL | 11    | CSS textures                          |
 | **Total** | **18**| 0 empty                               |
 
 ## Stand-in provenance (`img/standins/`)
 
 All sourced from `~/Desktop/kourtneyassets`, pre-cropped to remove baked-in text /
-watermarks, rendered at full colour and quality with a CSS watermark band on top.
-**These are temporary placeholders, not licensed final assets — every one must be
-replaced with a licensed original before publishing.**
+watermarks, rendered at full colour and quality with no overlay. **These are temporary
+placeholders, not licensed final assets — every one must be replaced with a licensed
+original.**
 
 | Stand-in file                | Slot   | Source (kourtneyassets)                         |
 |------------------------------|--------|-------------------------------------------------|
@@ -67,15 +67,15 @@ replaced with a licensed original before publishing.**
 | standin-img08-product.jpg    | IMG-08 | 70f5fe60… (bottle on amethyst, upper crop)      |
 | standin-img09-product.jpg    | IMG-09 | 70f5fe60… (hexagon product array, lower crop)   |
 | standin-img10-product.jpg    | IMG-10 | 1bdcab39… (dark jar tile, cropped)              |
-| standin-img13-modeling.jpg   | IMG-13 | de3bfc46… (figure in field, central crop)       |
+| standin-img13-modeling.jpg   | IMG-13 | e03719e2… (serum/dropper panel, cropped)        |
 | standin-img14-modeling.jpg   | IMG-14 | e03719e2… (portrait panel, cropped below text)  |
-| standin-img15-modeling.jpg   | IMG-15 | f6cf079a… (luminous forms, cropped off watermark)|
+| standin-img15-modeling.jpg   | IMG-15 | b878be50… (bio-alchemy still-life panel, cropped)|
 
 ## To reach final
 
 1. **Product (IMG-08/09/10):** shoot the three SKUs (Rising Star Riche Crème, Starry Eye
    Serum, Galactic Oil Cleanser) at 900 × 1125, then drop into `img/products/` and swap
-   the `<img src>` + remove the `slot--standin` class + `.slot-standin` watermark band.
+   the `<img src>` + remove the `slot--standin` class.
 2. **Modeling (IMG-01/13/14/15):** hero portrait + three on-skin ritual gestures.
 3. **Editorial (IMG-02–07, 11, 12, 16, 17, 18):** real B&W macro pairs (neuron/galaxy,
    iris/nebula, roots/vessels), ingredient macro, and the colour cosmic features — or
