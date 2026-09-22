@@ -1,0 +1,323 @@
+/* ============================================================================
+   INDIGO ALIEN BEAUTY — "noir meets cosmos"
+   A black-and-white editorial frame holding full-colour cosmic imagery.
+   Restrained, gallery-like. No glow, no holographic fills, no blanket shadows.
+   ============================================================================ */
+
+:root{
+  --bg:      #0b0b0c;   /* near-black gallery wall */
+  --bg-2:    #101012;   /* faint panel lift */
+  --ink:     #f3f1ea;   /* bone white */
+  --muted:   #9b978e;   /* grey type */
+  --faint:   #6a675f;
+  --line:    rgba(243,241,234,0.16);  /* hairline rule */
+  --line-2:  rgba(243,241,234,0.08);  /* softer hairline */
+  --indigo:  #3d2f72;   /* the single accent hue — only ever inside image slots */
+
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans:  'Inter', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --mono:  ui-monospace, 'SFMono-Regular', 'SF Mono', Menlo, Consolas, monospace;
+
+  --pad: clamp(22px, 5vw, 64px);
+  box-sizing:border-box;
+}
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); }
+body{
+  font-family:var(--sans); font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+a{ color:inherit; text-decoration:none; }
+img{ display:block; max-width:100%; }
+
+/* ---- layout ------------------------------------------------------------- */
+.wrap{ width:100%; max-width:1320px; margin:0 auto; padding:0 var(--pad); }
+.rule{ height:1px; background:var(--line); border:0; margin:0; }
+.section{ padding:clamp(70px,10vw,140px) 0; }
+
+/* ---- type helpers ------------------------------------------------------- */
+.kicker{
+  font-family:var(--mono); font-size:11px; letter-spacing:0.30em;
+  text-transform:uppercase; color:var(--muted); margin:0;
+}
+.kicker .idx{ color:var(--faint); }
+h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing:0; }
+.display{
+  font-family:var(--serif); font-weight:300; line-height:0.98;
+  letter-spacing:-0.005em;
+}
+.lead{
+  font-family:var(--serif); font-style:italic; font-weight:300;
+  font-size:clamp(18px,2.3vw,26px); line-height:1.4; color:var(--ink);
+}
+.smallcaps{
+  font-family:var(--mono); text-transform:uppercase; letter-spacing:0.24em;
+  font-size:12px; color:var(--muted);
+}
+
+/* section header shared */
+.sec-head{ display:flex; align-items:flex-end; justify-content:space-between;
+  gap:28px; flex-wrap:wrap; margin-bottom:clamp(32px,5vw,64px); }
+.sec-head h2{ font-size:clamp(30px,5vw,62px); line-height:1.0; }
+.sec-head .note{ max-width:34ch; color:var(--muted); font-size:14.5px; }
+
+/* ---- buttons ------------------------------------------------------------ */
+.btn{
+  display:inline-block; border:1px solid var(--ink); color:var(--ink);
+  background:transparent; padding:16px 32px;
+  font-family:var(--mono); font-size:12px; letter-spacing:0.24em;
+  text-transform:uppercase; cursor:pointer;
+  transition:background .35s ease, color .35s ease;
+}
+.btn:hover{ background:var(--ink); color:var(--bg); }
+.link-underline{
+  font-family:var(--mono); font-size:12px; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--ink);
+  padding-bottom:3px; border-bottom:1px solid var(--line);
+  transition:border-color .3s ease;
+}
+.link-underline:hover{ border-color:var(--ink); }
+
+/* ============================================================================
+   HEADER / NAV
+   ============================================================================ */
+.site-head{
+  position:sticky; top:0; z-index:40;
+  background:rgba(11,11,12,0.82);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-2);
+}
+.head-inner{
+  display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
+  gap:20px; padding:20px var(--pad);
+}
+.wordmark{
+  font-family:var(--serif); font-weight:400; font-size:20px;
+  letter-spacing:0.14em; text-transform:uppercase; white-space:nowrap;
+  justify-self:start;
+}
+.wordmark span{ display:block; font-family:var(--mono); font-size:8px;
+  letter-spacing:0.34em; color:var(--faint); margin-top:3px; }
+.main-nav{ display:flex; gap:30px; justify-self:center; }
+.main-nav a{
+  font-family:var(--mono); font-size:11px; letter-spacing:0.20em;
+  text-transform:uppercase; color:var(--muted); transition:color .25s ease;
+}
+.main-nav a:hover, .main-nav a[aria-current="page"]{ color:var(--ink); }
+.cart{ justify-self:end; font-family:var(--mono); font-size:11px;
+  letter-spacing:0.20em; text-transform:uppercase; color:var(--ink); white-space:nowrap; }
+@media (max-width:820px){
+  .head-inner{ grid-template-columns:1fr auto; row-gap:16px; }
+  .main-nav{ grid-column:1 / -1; justify-self:center; flex-wrap:wrap;
+    gap:20px; justify-content:center; }
+}
+
+/* ============================================================================
+   IMAGE PLACEHOLDER SLOTS  (labeled catalog frames)
+   ============================================================================ */
+.slot{
+  position:relative; width:100%; min-width:0;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--bg-2);
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+/* thin inner mat frame — a line, not a shadow */
+.slot::after{
+  content:""; position:absolute; inset:12px; border:1px solid var(--line-2);
+  pointer-events:none;
+}
+/* faint tonal grain so empty frames don't read as dead flat */
+.slot-grain{
+  position:absolute; inset:0; pointer-events:none; opacity:0.5;
+  background-image:radial-gradient(rgba(255,255,255,0.05) 0.5px, transparent 0.6px);
+  background-size:3px 3px;
+}
+.slot-meta{ position:relative; z-index:2; text-align:center; padding:20px; }
+.slot-id{
+  display:block; font-family:var(--mono); font-size:15px; letter-spacing:0.14em;
+  color:var(--ink); font-weight:600;
+}
+.slot-dim{ display:block; font-family:var(--mono); font-size:11px;
+  letter-spacing:0.16em; color:var(--muted); margin-top:8px; }
+.slot-type{
+  display:inline-block; margin-top:14px; padding:5px 12px;
+  font-family:var(--mono); font-size:10px; letter-spacing:0.22em;
+  text-transform:uppercase; color:var(--muted);
+  border:1px solid var(--line);
+}
+.slot-note{ display:block; margin-top:14px; font-family:var(--serif);
+  font-style:italic; font-size:15px; color:var(--muted); }
+
+/* monochrome subject — the diptych band */
+.slot--mono{
+  background:
+    radial-gradient(120% 90% at 25% 15%, rgba(255,255,255,0.10) 0%, transparent 50%),
+    linear-gradient(200deg,#151517 0%,#0a0a0b 78%);
+}
+/* full-colour cosmic subject — a single restrained indigo wash, no rainbow */
+.slot--cosmos{
+  background:
+    radial-gradient(90% 80% at 78% 22%, rgba(61,47,114,0.34) 0%, transparent 58%),
+    linear-gradient(200deg,#131317 0%,#0a0a0b 80%);
+}
+.slot--cosmos .slot-type{ color:#b7abe0; border-color:rgba(183,171,224,0.4); }
+/* product studio — neutral vignette */
+.slot--studio{
+  background:
+    radial-gradient(70% 70% at 50% 42%, rgba(255,255,255,0.07) 0%, transparent 62%),
+    linear-gradient(200deg,#141416 0%,#0a0a0b 82%);
+}
+
+/* ============================================================================
+   HERO
+   ============================================================================ */
+.hero{ display:grid; grid-template-columns:1.02fr 0.98fr; gap:clamp(30px,5vw,72px);
+  align-items:center; padding:clamp(56px,8vw,110px) 0 clamp(60px,9vw,120px); }
+.hero-copy{ max-width:600px; }
+.hero h1{ font-size:clamp(40px,9vw,116px); line-height:0.94;
+  text-transform:uppercase; letter-spacing:-0.01em; margin:26px 0 0; }
+.hero .lead{ max-width:44ch; margin:30px 0 40px; }
+.hero-fig{ width:100%; }
+.hero-fig .slot{ aspect-ratio:3/4; }
+@media (max-width:860px){
+  .hero{ grid-template-columns:minmax(0,1fr); }
+  .hero-fig{ order:-1; }
+  .hero-fig .slot{ aspect-ratio:4/3; }
+}
+
+/* ============================================================================
+   DIPTYCH — "As Above, So Below"
+   ============================================================================ */
+.diptych{ display:flex; flex-direction:column; gap:clamp(28px,4vw,56px); }
+.pair{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(14px,2vw,26px);
+  align-items:stretch; }
+.pair .slot{ aspect-ratio:4/5; }
+.pair-head{ display:flex; align-items:baseline; justify-content:space-between;
+  gap:16px; border-top:1px solid var(--line); padding-top:14px; margin-bottom:14px; }
+.pair-head .pi{ font-family:var(--serif); font-style:italic; font-size:22px; color:var(--muted); }
+.pair-head .pl{ font-family:var(--mono); font-size:11px; letter-spacing:0.22em;
+  text-transform:uppercase; color:var(--faint); }
+@media (max-width:640px){ .pair{ grid-template-columns:1fr; gap:14px; } }
+
+/* ============================================================================
+   PRODUCTS — "Luminous Offerings"
+   ============================================================================ */
+.products{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(20px,3vw,42px); }
+.product .slot{ aspect-ratio:4/5; }
+.product .p-body{ display:flex; align-items:baseline; justify-content:space-between;
+  gap:16px; margin-top:22px; border-top:1px solid var(--line); padding-top:18px; }
+.product h3{ font-size:26px; line-height:1.05; }
+.product .p-desc{ color:var(--muted); font-size:13.5px; margin:8px 0 0; max-width:32ch; }
+.product .price{ font-family:var(--mono); font-size:14px; letter-spacing:0.08em; color:var(--ink); }
+.product .p-foot{ display:flex; align-items:center; justify-content:space-between;
+  margin-top:16px; }
+@media (max-width:820px){ .products{ grid-template-columns:1fr; max-width:460px; margin:0 auto; } }
+
+/* ============================================================================
+   FULL-BLEED BANNER — "Starseed Ritual Collection"
+   ============================================================================ */
+.banner{ position:relative; }
+.banner .slot{ aspect-ratio:auto; min-height:clamp(360px,52vw,620px); border-left:0; border-right:0; }
+.banner .slot::after{ inset:18px; }
+.banner-copy{ position:absolute; inset:0; z-index:3; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; text-align:center; padding:30px; }
+.banner-copy .kicker{ margin-bottom:22px; }
+.banner-copy h2{ font-size:clamp(34px,6.5vw,88px); line-height:0.98;
+  text-transform:uppercase; letter-spacing:0.01em; }
+.banner-copy .sub{ font-family:var(--serif); font-style:italic; font-size:clamp(16px,2.4vw,24px);
+  color:var(--ink); margin-top:20px; }
+/* keep the banner meta chip out of the way, lower-left */
+.banner .slot-meta{ position:absolute; left:22px; bottom:18px; text-align:left; padding:0; z-index:2; }
+.banner .slot-meta .slot-type{ margin-top:10px; }
+
+/* ============================================================================
+   LIMITED-RUN DETAIL BLOCK
+   ============================================================================ */
+.detail{ text-align:center; padding:clamp(46px,7vw,90px) 0; }
+.detail .line{ display:inline-flex; flex-wrap:wrap; gap:10px 26px; justify-content:center;
+  align-items:center; padding:26px 0; border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line); }
+.detail .line span{ font-family:var(--mono); font-size:12px; letter-spacing:0.32em;
+  text-transform:uppercase; color:var(--muted); }
+.detail .line b{ color:var(--ink); font-weight:400; }
+.detail .line i{ color:var(--faint); font-style:normal; }
+
+/* ============================================================================
+   FOOTER + NEWSLETTER
+   ============================================================================ */
+.site-foot{ border-top:1px solid var(--line); padding:clamp(56px,8vw,100px) 0 48px; }
+.foot-top{ display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(36px,6vw,80px);
+  align-items:start; }
+.news h2{ font-size:clamp(28px,4.5vw,52px); line-height:1.0; }
+.news p{ color:var(--muted); max-width:40ch; margin:16px 0 26px; font-size:14.5px; }
+.news form{ display:flex; gap:0; max-width:440px; border-bottom:1px solid var(--line); }
+.news input{ flex:1; background:transparent; border:0; color:var(--ink);
+  font-family:var(--sans); font-size:15px; padding:14px 2px; }
+.news input::placeholder{ color:var(--faint); }
+.news input:focus{ outline:0; }
+.news button{ background:transparent; border:0; color:var(--ink); cursor:pointer;
+  font-family:var(--mono); font-size:12px; letter-spacing:0.20em; text-transform:uppercase;
+  padding:0 6px; }
+.news button:hover{ color:var(--muted); }
+.foot-nav{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+.foot-col h4{ font-family:var(--mono); font-weight:400; font-size:11px; letter-spacing:0.22em;
+  text-transform:uppercase; color:var(--faint); margin:0 0 16px; }
+.foot-col a{ display:block; font-size:14px; color:var(--muted); margin-bottom:11px;
+  transition:color .25s ease; }
+.foot-col a:hover{ color:var(--ink); }
+.foot-bottom{ display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:14px; margin-top:clamp(46px,7vw,80px); padding-top:24px;
+  border-top:1px solid var(--line-2); }
+.foot-bottom span{ font-family:var(--mono); font-size:11px; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--faint); }
+@media (max-width:760px){
+  .foot-top{ grid-template-columns:1fr; }
+}
+
+/* ============================================================================
+   INTERIOR PAGE HERO (rituals / about / contact)
+   ============================================================================ */
+.page-hero{ padding:clamp(70px,10vw,130px) 0 clamp(30px,5vw,60px); }
+.page-hero h1{ font-size:clamp(46px,10vw,120px); line-height:0.94;
+  text-transform:uppercase; letter-spacing:-0.01em; margin:22px 0 0; }
+.page-hero .lead{ max-width:46ch; margin-top:28px; }
+
+/* generic two-up editorial rows */
+.row2{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(24px,4vw,60px);
+  align-items:center; padding:clamp(40px,6vw,90px) 0; }
+.row2.flip .row2-copy{ order:2; }
+.row2 .slot{ aspect-ratio:4/5; }
+.row2-copy h2{ font-size:clamp(28px,4vw,48px); line-height:1.03; }
+.row2-copy p{ color:var(--muted); margin:18px 0 0; max-width:44ch; }
+.row2-copy .kicker{ margin-bottom:18px; }
+@media (max-width:800px){
+  .row2{ grid-template-columns:1fr; }
+  .row2.flip .row2-copy{ order:0; }
+}
+
+/* steps list (rituals) */
+.steps{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(20px,3vw,40px); }
+.step .slot{ aspect-ratio:3/4; }
+.step .s-no{ font-family:var(--serif); font-style:italic; font-size:22px; color:var(--muted);
+  margin-top:20px; }
+.step h3{ font-size:23px; margin:6px 0 8px; }
+.step p{ color:var(--muted); font-size:14px; margin:0; }
+@media (max-width:820px){ .steps{ grid-template-columns:1fr; max-width:440px; margin:0 auto; } }
+
+/* contact */
+.contact-grid{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(30px,5vw,70px);
+  align-items:start; padding-bottom:clamp(50px,8vw,100px); }
+.contact-form label{ display:block; font-family:var(--mono); font-size:11px;
+  letter-spacing:0.20em; text-transform:uppercase; color:var(--muted); margin:24px 0 8px; }
+.contact-form input, .contact-form textarea{
+  width:100%; background:transparent; border:0; border-bottom:1px solid var(--line);
+  color:var(--ink); font-family:var(--sans); font-size:15px; padding:12px 2px; }
+.contact-form input:focus, .contact-form textarea:focus{ outline:0; border-color:var(--ink); }
+.contact-form textarea{ resize:vertical; min-height:110px; }
+.contact-form .btn{ margin-top:34px; }
+.contact-info dt{ font-family:var(--mono); font-size:11px; letter-spacing:0.20em;
+  text-transform:uppercase; color:var(--faint); margin-top:26px; }
+.contact-info dd{ margin:8px 0 0; font-family:var(--serif); font-size:20px; color:var(--ink); }
+@media (max-width:800px){ .contact-grid{ grid-template-columns:1fr; } }
