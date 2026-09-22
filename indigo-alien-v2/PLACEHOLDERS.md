@@ -40,7 +40,7 @@ Types: **PRODUCT** (studio product shot) · **MODELING** (person / on-skin) ·
 | IMG-16 | about.html    | Belief row                     | EDITORIAL | 1600 × 1200 px  | CSS texture `.sx-belief` (indigo)              | ◑ CSS temp    |
 | IMG-17 | about.html    | Practice row                   | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-ingredient` (B&W)             | ◑ CSS temp    |
 | IMG-18 | contact.html  | Contact                        | EDITORIAL | 1200 × 1500 px  | CSS texture `.sx-contact` (indigo)             | ◑ CSS temp    |
-| IMG-19 | about.html    | Founder row (Meet Kourtney)    | MODELING  | 900 × 1200 px   | Client portrait `photos/ia-founder-kourtney.jpg` (web-res) | ⚠ original needed |
+| IMG-19 | about.html    | Founder row (Meet Kourtney)    | MODELING  | 900 × 1200 px   | Client studio portrait `photos/ia-founder-studio-kourtney.jpg` (web-res) | ⚠ original needed |
 
 Legend — **⚠ needs photo**: full-colour temporary stand-in in place (no on-page label),
 must be replaced with a licensed original. **◑ CSS temp**: CSS texture in place; replace
@@ -80,7 +80,12 @@ originals are needed before Shopify.
 | File                     | Slot   | Source / treatment                                                        |
 |--------------------------|--------|---------------------------------------------------------------------------|
 | ia-hero-kourtney.jpg     | IMG-01 | Campaign shot with jar (1170 × 2532 phone screenshot). Rounded corners and the baked-in "Indigo Alien Beauty" title removed; cropped to 1154 × 2106. |
-| ia-founder-kourtney.jpg  | IMG-19 | Clean portrait, 895 × 1200, used as-is.                                   |
+| ia-founder-studio-kourtney.jpg | IMG-19 | White-bg studio shot, 1121 × 1403, used as-is (replaces ia-founder-kourtney.jpg, retained on disk). |
+| ia-about-header-kourtney.jpg | —  | White-bg studio shot, 1122 × 1402 — About header figure.                  |
+| ia-look-01.jpg           | —      | Holographic campaign (logo printed), 1122 × 1402 — index lookbook strip.  |
+| ia-look-02.jpg           | —      | Holographic campaign (logo printed), 1122 × 1402 — index lookbook strip.  |
+| ia-look-03.jpg           | —      | Holographic campaign (logo printed), 1122 × 1402 — index lookbook strip.  |
+| ia-dropper-kourtney.jpg  | —      | Dropper close-up, 1100 × 1430 — index serum band.                         |
 
 ## Brand assets (`img/brand/`)
 

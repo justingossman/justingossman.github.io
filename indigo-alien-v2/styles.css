@@ -547,3 +547,35 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
   text-transform:uppercase; letter-spacing:-0.005em;
   color:var(--ink); margin:16px 0 0;
 }
+
+/* ============================================================================
+   CLIENT CAMPAIGN PHOTOS — about header figure, serum band, lookbook strip
+   Mobile-first. Every frame has an explicit aspect-ratio and every <img> has
+   width/height attributes, so nothing shifts on load. Faces never cropped:
+   mobile frames use each photo's natural ratio.
+   ============================================================================ */
+/* About header figure — natural ratio, centred plate */
+.about-fig{ padding-bottom:clamp(20px,3vw,40px); }
+.about-fig .slot{ aspect-ratio:1122/1402; max-width:680px; margin:0 auto; }
+
+/* Serum band — natural ratio on mobile (zero crop); wide editorial band on desktop,
+   positioned high so the face stays fully in frame */
+.serum-band{ border-top:1px solid var(--line-2); border-bottom:1px solid var(--line-2);
+  margin-top:clamp(20px,4vw,40px); }
+.serum-band img{ display:block; width:100%; height:auto;
+  aspect-ratio:1100/1430; object-fit:cover; }
+@media (min-width:861px){
+  .serum-band img{ aspect-ratio:16/7; object-position:50% 18%; }
+}
+
+/* Lookbook strip — swipeable snap strip on mobile, three-up row on desktop */
+.lookbook{ padding-top:0; }
+.look-strip{ display:flex; gap:clamp(12px,1.8vw,26px); overflow-x:auto;
+  scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none; padding-bottom:4px; }
+.look-strip::-webkit-scrollbar{ display:none; }
+.look-slot{ flex:0 0 78%; scroll-snap-align:center; aspect-ratio:4/5; }
+@media (min-width:861px){
+  .look-strip{ overflow-x:visible; }
+  .look-slot{ flex:1; }
+}
