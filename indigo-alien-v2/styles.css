@@ -183,7 +183,8 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
 .hero-fig .slot{ aspect-ratio:3/4; }
 @media (max-width:860px){
   .hero{ grid-template-columns:minmax(0,1fr); }
-  .hero-fig{ order:-1; }
+  .hero-copy{ min-width:0; }
+  .hero-fig{ order:-1; min-width:0; }
   .hero-fig .slot{ aspect-ratio:4/3; }
 }
 

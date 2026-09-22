@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" fill="#0b0b0c"/>
+  <!-- bone-white 4-point celestial spark -->
+  <path d="M32 5 L39 25 L59 32 L39 39 L32 59 L25 39 L5 32 L25 25 Z" fill="#ece7df"/>
+  <!-- small amethyst accent spark -->
+  <path d="M47 12 L49.5 18 L55.5 20.5 L49.5 23 L47 29 L44.5 23 L38.5 20.5 L44.5 18 Z" fill="#7b4bd8"/>
+</svg>
