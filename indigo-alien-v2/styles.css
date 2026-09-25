@@ -279,6 +279,17 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
 .banner{ position:relative; }
 .banner .slot{ aspect-ratio:auto; min-height:clamp(360px,52vw,620px); border-left:0; border-right:0; }
 .banner .slot::after{ inset:18px; }
+/* IMG-11 scrim — the product-render stand-in is brighter than the old indigo
+   texture; darken the mid-band where the copy sits (::after is taken by the
+   mat frame). Above the image + grain (z1), below the copy (z3). */
+.banner .slot--standin::before{
+  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:linear-gradient(180deg,
+    rgba(0,0,0,0.40) 0%,
+    rgba(0,0,0,0.70) 38%,
+    rgba(0,0,0,0.70) 62%,
+    rgba(0,0,0,0.40) 100%);
+}
 .banner-copy{ position:absolute; inset:0; z-index:3; display:flex; flex-direction:column;
   align-items:center; justify-content:center; text-align:center; padding:30px; }
 .banner-copy .kicker{ margin-bottom:22px; }

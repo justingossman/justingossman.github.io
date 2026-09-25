@@ -32,7 +32,7 @@ Types: **PRODUCT** (studio product shot) · **MODELING** (person / on-skin) ·
 | IMG-08 | index.html    | Luminous Offerings             | PRODUCT   | 900 × 1125 px   | Stand-in `standin-img08-product.jpg`           | ⚠ needs photo |
 | IMG-09 | index.html    | Luminous Offerings             | PRODUCT   | 900 × 1125 px   | Stand-in `standin-img09-product.jpg`           | ⚠ needs photo |
 | IMG-10 | index.html    | Luminous Offerings             | PRODUCT   | 900 × 1125 px   | Stand-in `standin-img10-product.jpg`           | ⚠ needs photo |
-| IMG-11 | index.html    | Starseed Ritual Collection     | EDITORIAL | 2400 × 1000 px  | CSS texture `.sx-banner` (indigo)              | ◑ CSS temp    |
+| IMG-11 | index.html    | Starseed Ritual Collection     | EDITORIAL | 2400 × 1000 px  | CSS texture `.sx-banner` (indigo). IMG_8124 render rejected — misspelled labels ("SOLAR SMELD SUN BALM" et al.) legible at banner size; crop kept unreferenced at `standins/standin-img11-banner.jpg` | ◑ CSS temp    |
 | IMG-12 | rituals.html  | Intro row                      | EDITORIAL | 2400 × 1200 px  | CSS texture `.sx-ritual` (indigo)              | ◑ CSS temp    |
 | IMG-13 | rituals.html  | The Sequence — Step i          | MODELING  | 900 × 1200 px   | Stand-in `standin-img13-modeling.jpg`          | ⚠ needs photo |
 | IMG-14 | rituals.html  | The Sequence — Step ii         | MODELING  | 900 × 1200 px   | Stand-in `standin-img14-modeling.jpg`          | ⚠ needs photo |
