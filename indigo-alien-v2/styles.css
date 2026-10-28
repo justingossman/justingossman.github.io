@@ -638,3 +638,46 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
 .pdp-ingr{ margin-top:36px; }
 .pdp-ingr p{ font-size:13px; line-height:1.75; color:var(--faint); max-width:70ch; margin:12px 0 0; }
 .pdp-more .pdp-ingr:first-child{ margin-top:0; }
+
+/* ============================================================================
+   PRODUCT PAGE PACKSHOT — cosmic stage (pure CSS)
+   The packshots are transparent WebPs, so no blend mode: the stage paints
+   behind them. Each page sets two custom properties on .pdp-shot:
+     --tone   r,g,b of the product's glow (gold / violet / deep blue / indigo)
+     --floor  how far down the frame the product's base sits, for the shadow
+   ============================================================================ */
+.slot.pdp-shot{
+  --tone:96,66,168; --floor:91.5%;
+  background:
+    /* nebula glow behind the product */
+    radial-gradient(42% 34% at 50% 46%, rgba(var(--tone),0.30), rgba(var(--tone),0) 100%),
+    radial-gradient(70% 55% at 50% 50%, rgba(var(--tone),0.12), rgba(var(--tone),0) 100%),
+    /* star field: three offset tiles of single-pixel points */
+    radial-gradient(1px 1px at 18px 24px, rgba(255,255,255,0.55), transparent),
+    radial-gradient(1px 1px at 84px 70px, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1.5px 1.5px at 140px 30px, rgba(220,210,255,0.45), transparent),
+    radial-gradient(1px 1px at 52px 118px, rgba(255,255,255,0.25), transparent),
+    linear-gradient(200deg,#121016 0%,#09090b 82%);
+  background-size:auto,auto,170px 150px,130px 170px,190px 210px,110px 140px,auto;
+}
+/* soft contact shadow + faint tinted reflection on the "floor" under the product */
+.slot.pdp-shot::before{
+  content:""; position:absolute; z-index:0; pointer-events:none;
+  left:50%; top:var(--floor); width:56%; height:7%;
+  transform:translate(-50%,-50%);
+  background:
+    radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,0.65), rgba(0,0,0,0) 100%),
+    radial-gradient(50% 30% at 50% 62%, rgba(var(--tone),0.22), rgba(var(--tone),0) 100%);
+}
+.pdp-shot .slot-img{
+  transition:filter .6s ease, transform .6s ease;
+  filter:drop-shadow(0 0 0 rgba(var(--tone),0));
+}
+.pdp-shot:hover .slot-img{
+  filter:drop-shadow(0 0 22px rgba(var(--tone),0.38)) brightness(1.04);
+  transform:translateY(-0.8%);
+}
+@media (prefers-reduced-motion:reduce){
+  .pdp-shot .slot-img{ transition:none; }
+  .pdp-shot:hover .slot-img{ transform:none; }
+}
