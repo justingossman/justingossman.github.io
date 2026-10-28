@@ -18,16 +18,16 @@ Types: **PRODUCT** (product on a clean background) · **MODELING** (person / on-
 | ID     | Page          | Section                        | Type      | Rec. dimensions | Current fill                                   | Status        |
 |--------|---------------|--------------------------------|-----------|-----------------|------------------------------------------------|---------------|
 | IMG-01 | index.html    | Hero                           | MODELING  | 1200 × 1600 px  | Client campaign shot `photos/ia-hero-kourtney.jpg` (web-res) | ⚠ original needed |
-| IMG-02 | index.html    | Diptych — Pair I               | PRODUCT   | 1000 × 1250 px  | `shopify/product-tallow.jpg`: Twinkle Whipped Tallow jar on white | ✓ client photo |
-| IMG-03 | index.html    | Diptych — Pair I               | PRODUCT   | 1000 × 1250 px  | `shopify/product-sunbalm.jpg`: Solar Shield Sun Balm tins on white | ✓ client photo |
-| IMG-04 | index.html    | Diptych — Pair II              | PRODUCT   | 1000 × 1250 px  | none                                           | ◻ placeholder |
-| IMG-05 | index.html    | Diptych — Pair II              | PRODUCT   | 1000 × 1250 px  | none                                           | ◻ placeholder |
-| IMG-06 | index.html    | Diptych — Pair III             | PRODUCT   | 1000 × 1250 px  | none                                           | ◻ placeholder |
-| IMG-07 | index.html    | Diptych — Pair III             | PRODUCT   | 1000 × 1250 px  | none                                           | ◻ placeholder |
-| IMG-08 | index.html    | Luminous Offerings — Riche Crème | PRODUCT | 900 × 1125 px   | none (the old styled render `standin-img08` is no longer used) | ◻ placeholder |
-| IMG-09 | index.html    | Luminous Offerings — Eye Serum | PRODUCT   | 900 × 1125 px   | none (old render `standin-img09` had garbled labels)  | ◻ placeholder |
-| IMG-10 | index.html    | Luminous Offerings — Cleanser  | PRODUCT   | 900 × 1125 px   | none (old render `standin-img10` was 300 px wide with a misspelled label) | ◻ placeholder |
-| IMG-11 | index.html    | Starseed Ritual Collection     | PRODUCT   | 2400 × 1000 px  | Section hidden. Needs product shots of Galactic Oil Cleanser, Starry Eye Serum and Rising Star Riche Crème. The IMG_8124 group render was rejected for misspelled labels ("SOLAR SMELD SUN BALM" et al.) and is kept untracked at `standins/standin-img11-banner.jpg`. | ⊘ hidden |
+| IMG-02 | index.html    | Diptych — Pair I               | PRODUCT   | 1000 × 1250 px  | `shopify/product-tallow.webp`: Twinkle Whipped Tallow jar | ✓ client photo |
+| IMG-03 | index.html    | Diptych — Pair I               | PRODUCT   | 1000 × 1250 px  | `shopify/product-sunbalm.webp`: Solar Shield Sun Balm tins | ✓ client photo |
+| IMG-04 | index.html    | Diptych — Pair II              | PRODUCT   | 1000 × 1250 px  | `shopify/product-mucin.webp`: Nebula Mucin Essence tube | ✓ client photo |
+| IMG-05 | index.html    | Diptych — Pair II              | PRODUCT   | 1000 × 1250 px  | `shopify/product-bodyoil.webp`: Celestial Silk After Shave Body Oil bottle | ✓ client photo |
+| IMG-06 | index.html    | Diptych — Pair III             | PRODUCT   | 1000 × 1250 px  | `shopify/product-deodorant.webp`: Transcendent Tallow Deodorant | ✓ client photo |
+| IMG-07 | index.html    | Diptych — Pair III             | PRODUCT   | 1000 × 1250 px  | `shopify/product-set-purity-radiance.webp`: Purity & Radiance Ritual set (Riche Crème + Cleanser) | ✓ client photo |
+| IMG-08 | index.html    | Luminous Offerings — Riche Crème | PRODUCT | 900 × 1125 px   | `shopify/product-richecreme.webp`: Rising Star Riche Crème tube | ✓ client photo |
+| IMG-09 | index.html    | Luminous Offerings — Eye Serum | PRODUCT   | 900 × 1125 px   | `shopify/product-eyeserum.webp`: Starry Eye Serum tube | ✓ client photo |
+| IMG-10 | index.html    | Luminous Offerings — Cleanser  | PRODUCT   | 900 × 1125 px   | `shopify/product-cleanser.webp`: Galactic Oil Cleanser tube | ✓ client photo |
+| IMG-11 | index.html    | Starseed Ritual Collection     | PRODUCT   | 2400 × 1000 px  | Section hidden by choice (2026-10-28). Packshots of the three pieces now exist; needs an approved banner composition. The IMG_8124 group render was rejected for misspelled labels ("SOLAR SMELD SUN BALM" et al.) and is kept untracked at `standins/standin-img11-banner.jpg`. | ⊘ hidden |
 | IMG-12 | rituals.html  | Intro row                      | EDITORIAL | 2400 × 1200 px  | CSS texture `.sx-ritual` (indigo), unlabelled  | ◻ placeholder |
 | IMG-13 | rituals.html  | The Sequence — Step i          | MODELING  | 900 × 1200 px   | `shopify/ritual-cleanser.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
 | IMG-14 | rituals.html  | The Sequence — Step ii         | MODELING  | 900 × 1200 px   | `shopify/ritual-eyeserum.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
@@ -41,9 +41,9 @@ Types: **PRODUCT** (product on a clean background) · **MODELING** (person / on-
 
 | Status              | Count | Slots                                   |
 |---------------------|-------|-----------------------------------------|
-| ✓ client photo      | 6     | IMG-02, 03, 13, 14, 15, 17              |
+| ✓ client photo      | 13    | IMG-02–10, 13, 14, 15, 17               |
 | ⚠ original needed   | 2     | IMG-01, 19                              |
-| ◻ placeholder       | 10    | IMG-04–10, 12, 16, 18                   |
+| ◻ placeholder       | 3     | IMG-12, 16, 18                          |
 | ⊘ hidden            | 1     | IMG-11                                  |
 
 ## Shopify photos (`img/photos/shopify/`)
@@ -53,14 +53,30 @@ Only the web JPEGs below are in the repo. The 19 PNG originals are kept outside 
 `~/Desktop/kourtneyassets/shopify-originals/`. `img/photos/shopify/ALTERNATES.md`
 describes every original.
 
-| File                            | Slot   | Source / treatment                                          |
-|---------------------------------|--------|-------------------------------------------------------------|
-| product-tallow.jpg              | IMG-02 | `product-tallow.png` (4000², transparent background) on white, padded to 1000 × 1250 |
-| product-sunbalm.jpg             | IMG-03 | `product-sunbalm.png` (4000², transparent background) on white, padded to 1000 × 1250 |
-| ritual-cleanser.jpg             | IMG-13 | `lifestyle-cleanser.png`, scaled to 1400 × 1400             |
-| ritual-eyeserum.jpg             | IMG-14 | `lifestyle-eyeserum.png`, scaled to 1400 × 1400             |
-| ritual-richecreme.jpg           | IMG-15 | `lifestyle-richecreme.png`, scaled to 1400 × 1400           |
-| about-ingredient-vanilla-bw.jpg | IMG-17 | `ingredient-tallow.png`: a crop of the vanilla bean with no text, converted to grayscale, 800 × 1000 |
+Packshots come from the products' own Shopify media (product names as in Shopify admin).
+Each one is a 4:5 crop framed tightly around the product (10% margin), with the transparency
+kept, saved as WebP (1000 × 1250, about 40–75 KB). The slot's dark gradient shows behind the
+product, so there's no white box.
+
+| File                                | Slot   | Shopify source                                          |
+|-------------------------------------|--------|---------------------------------------------------------|
+| product-tallow.webp                 | IMG-02 | `WhippedTallow_….png` (4000²)                           |
+| product-sunbalm.webp                | IMG-03 | `EdibleSunBalm_….png` (4000²)                           |
+| product-mucin.webp                  | IMG-04 | `SnailMucinEssence_….png` (4422²)                       |
+| product-bodyoil.webp                | IMG-05 | `50mlSeamossOil.png` (4000²)                            |
+| product-deodorant.webp              | IMG-06 | `2ozTallowDeodorant.png` (4000²)                        |
+| product-set-purity-radiance.webp    | IMG-07 | `Clean_HydrateFaceDuo.png` (4000²)                      |
+| product-richecreme.webp             | IMG-08 | `RicheCreme_….png` (4422²)                              |
+| product-eyeserum.webp               | IMG-09 | `EyeSerum_….png` (4422²)                                |
+| product-cleanser.webp               | IMG-10 | `FoamingOilCleanser_….png` (4422²)                      |
+| ritual-cleanser.jpg                 | IMG-13 | `lifestyle-cleanser.png`, scaled to 1400 × 1400         |
+| ritual-eyeserum.jpg                 | IMG-14 | `lifestyle-eyeserum.png`, scaled to 1400 × 1400         |
+| ritual-richecreme.jpg               | IMG-15 | `lifestyle-richecreme.png`, scaled to 1400 × 1400       |
+| about-ingredient-vanilla-bw.jpg     | IMG-17 | `ingredient-tallow.png`: a crop of the vanilla bean with no text, converted to grayscale, 800 × 1000 |
+
+**Names to confirm with the client:** the Shopify product is titled "Celestical Silk After
+Shave Body Oil" (typo); the site uses "Celestial". The tube and the Shopify title say
+"Nebula Mucin Essence", while the CDN files say "SnailMucinEssence".
 
 **Ingredient cards are not used in the product slots.** Each one has a headline and benefit
 copy printed over the photo. The benefit copy would be unreadable in a small "What's inside"
@@ -99,11 +115,9 @@ with the designer's original vector / transparent PNG** for print and Shopify.
 
 ## To reach final
 
-1. **Product shots needed:** Rising Star Riche Crème (IMG-08), Starry Eye Serum (IMG-09) and Galactic
-   Oil Cleanser (IMG-10), each on a clean background. These three also unlock the hidden
-   Starseed banner (IMG-11). The diptych needs four more product shots (IMG-04–07). Snail Mucin
-   Essence and Manuka Honey & Sea Moss Body Oil are the obvious next pair. To fill a placeholder,
-   add `<img class="slot-img" …>` inside the slot and the `slot--standin` class.
+1. **Starseed banner (IMG-11):** hidden by choice. Packshots of all three collection tubes now
+   exist (`product-richecreme/eyeserum/cleanser.webp`), so it can come back when a banner
+   composition is approved. Remove `hidden` on the section to restore it.
 2. **Modeling (IMG-01/19):** full-res originals of the two client shots.
 3. **Editorial (IMG-12, 16, 18):** colour cosmic features, or keep the CSS textures if approved.
 

@@ -1,17 +1,26 @@
 # Shopify photos — what each original shows
 
-All 19 originals are PNGs in `~/Desktop/kourtneyassets/shopify-originals/`, **not in the repo**.
-They are 2000 × 2000, except the two packshots, which are 4000 × 4000. The JPEGs in this folder,
-and the slots they fill, are listed in `../../../PLACEHOLDERS.md`.
+All 26 originals are PNGs in `~/Desktop/kourtneyassets/shopify-originals/`, **not in the repo**.
+The packshots are 4000² or 4422²; everything else is 2000 × 2000. The web files in this folder
+(WebP packshots, JPEG photos) and the slots they fill are listed in `../../../PLACEHOLDERS.md`.
 
-## Product shots (product on a clean background)
+## Product shots (product on a transparent background, from each product's Shopify media)
 
-| File                | Shows                                                    | Used? |
-|---------------------|----------------------------------------------------------|-------|
-| product-tallow.png  | Twinkle Whipped Tallow jar, gold lid and spoon, transparent background | IMG-02 |
-| product-sunbalm.png | Two Solar Shield Sun Balm tins, transparent background   | IMG-03 |
+| File                            | Shopify product                         | Size   | Used? |
+|---------------------------------|-----------------------------------------|--------|-------|
+| product-tallow.png              | Twinkle Whipped Tallow                  | 4000²  | IMG-02 |
+| product-sunbalm.png             | Solar Shield Sun Balm                   | 4000²  | IMG-03 |
+| product-mucin.png               | Nebula Mucin Essence                    | 4422²  | IMG-04 |
+| product-bodyoil.png             | Celestical [sic] Silk After Shave Body Oil | 4000² | IMG-05 |
+| product-deodorant.png           | Transcendent Tallow Deodorant           | 4000²  | IMG-06 |
+| product-set-purity-radiance.png | The Purity & Radiance Ritual (bundle)   | 4000²  | IMG-07 |
+| product-richecreme.png          | Rising Star Riche Crème                 | 4422²  | IMG-08 |
+| product-eyeserum.png            | Starry Eye Serum                        | 4422²  | IMG-09 |
+| product-cleanser.png            | Galactic Oil Cleanser                   | 4422²  | IMG-10 |
 
-There are no product shots of Riche Crème, Eye Serum, Cleanser, Snail Mucin Essence or Body Oil.
+Not downloaded: the other bundle images in Shopify, `MustHaveDaily` (The Starseed Daily Protocol),
+`TripleFightingProtection` (The Celestial Trinity Ritual) and `FullMoistureSet` (The Luminous
+Hydration Ritual), all 4000², plus 218 unnamed `asset_*` scene renders.
 
 ## Ingredient cards (headline and benefit copy printed on the photo; not for product slots)
 
