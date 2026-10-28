@@ -28,22 +28,22 @@ Types: **PRODUCT** (product on a clean background) · **MODELING** (person / on-
 | IMG-09 | index.html    | Luminous Offerings — Eye Serum | PRODUCT   | 900 × 1125 px   | `shopify/product-eyeserum.webp`: Starry Eye Serum tube | ✓ client photo |
 | IMG-10 | index.html    | Luminous Offerings — Cleanser  | PRODUCT   | 900 × 1125 px   | `shopify/product-cleanser.webp`: Galactic Oil Cleanser tube | ✓ client photo |
 | IMG-11 | index.html    | Starseed Ritual Collection     | PRODUCT   | 2400 × 1000 px  | Section hidden by choice (2026-10-28). Packshots of the three pieces now exist; needs an approved banner composition. The IMG_8124 group render was rejected for misspelled labels ("SOLAR SMELD SUN BALM" et al.) and is kept untracked at `standins/standin-img11-banner.jpg`. | ⊘ hidden |
-| IMG-12 | rituals.html  | Intro row                      | EDITORIAL | 2400 × 1200 px  | CSS texture `.sx-ritual` (indigo), unlabelled  | ◻ placeholder |
+| IMG-12 | rituals.html  | Intro row                      | MODELING  | 1000 × 1250 px  | `shopify/lifestyle-mucin.jpg`: Kourtney, chrome bodice, galaxy background | ✓ client photo |
 | IMG-13 | rituals.html  | The Sequence — Step i          | MODELING  | 900 × 1200 px   | `shopify/ritual-cleanser.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
 | IMG-14 | rituals.html  | The Sequence — Step ii         | MODELING  | 900 × 1200 px   | `shopify/ritual-eyeserum.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
 | IMG-15 | rituals.html  | The Sequence — Step iii        | MODELING  | 900 × 1200 px   | `shopify/ritual-richecreme.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
-| IMG-16 | about.html    | Belief row                     | EDITORIAL | 1600 × 1200 px  | CSS texture `.sx-belief` (indigo), unlabelled. None of the Shopify images fit. | ◻ placeholder |
+| IMG-16 | about.html    | Belief row                     | MODELING  | 1000 × 1250 px  | `shopify/lifestyle-tallow.jpg`: Kourtney, chrome collar, hand to chin | ✓ client photo |
 | IMG-17 | about.html    | Practice row (ingredient origin) | EDITORIAL | 1000 × 1250 px | `shopify/about-ingredient-vanilla-bw.jpg`: black-and-white vanilla bean macro, 800 × 1000 | ✓ client photo |
-| IMG-18 | contact.html  | Contact                        | EDITORIAL | 1200 × 1500 px  | CSS texture `.sx-contact` (indigo), unlabelled | ◻ placeholder |
+| IMG-18 | contact.html  | Contact                        | MODELING  | 1200 × 1500 px  | `shopify/lifestyle-deodorant.jpg`: Kourtney, arms raised, starfield | ✓ client photo |
 | IMG-19 | about.html    | Founder row (Meet Kourtney)    | MODELING  | 900 × 1200 px   | Client studio portrait `photos/ia-founder-studio-kourtney.jpg` (web-res) | ⚠ original needed |
 
 ## Totals
 
 | Status              | Count | Slots                                   |
 |---------------------|-------|-----------------------------------------|
-| ✓ client photo      | 13    | IMG-02–10, 13, 14, 15, 17               |
+| ✓ client photo      | 16    | IMG-02–10, 12–18                        |
 | ⚠ original needed   | 2     | IMG-01, 19                              |
-| ◻ placeholder       | 3     | IMG-12, 16, 18                          |
+| ◻ placeholder       | 0     | none                                    |
 | ⊘ hidden            | 1     | IMG-11                                  |
 
 ## Shopify photos (`img/photos/shopify/`)
@@ -119,7 +119,7 @@ with the designer's original vector / transparent PNG** for print and Shopify.
    exist (`product-richecreme/eyeserum/cleanser.webp`), so it can come back when a banner
    composition is approved. Remove `hidden` on the section to restore it.
 2. **Modeling (IMG-01/19):** full-res originals of the two client shots.
-3. **Editorial (IMG-12, 16, 18):** colour cosmic features, or keep the CSS textures if approved.
+3. **IMG-12, 16, 18** now use Kourtney lifestyle shots that also appear on product pages. Swap them for photos used nowhere else when new shoots arrive.
 
 ### Breakdown by page
 - **index.html** — 11 (IMG-01 … IMG-11)

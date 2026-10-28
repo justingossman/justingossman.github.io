@@ -1,6 +1,6 @@
 # Shopify photos — what each original shows
 
-All 26 originals are PNGs in `~/Desktop/kourtneyassets/shopify-originals/`, **not in the repo**.
+All 27 originals are PNGs in `~/Desktop/kourtneyassets/shopify-originals/`, **not in the repo**.
 The packshots are 4000² or 4422²; everything else is 2000 × 2000. The web files in this folder
 (WebP packshots, JPEG photos) and the slots they fill are listed in `../../../PLACEHOLDERS.md`.
 
@@ -47,8 +47,9 @@ Hydration Ritual), all 4000², plus 218 unnamed `asset_*` scene renders.
 | lifestyle-cleanser.png   | Kourtney with cleanser foam on her cheek, galaxy background | IMG-13 |
 | lifestyle-eyeserum.png   | Kourtney pressing a sponge to her cheek, galaxy background | IMG-14 |
 | lifestyle-richecreme.png | Kourtney with both hands framing her face, galaxy background | IMG-15 |
-| lifestyle-snailmucin.png | Kourtney, chrome bodice, galaxy background (no text)     | alternate |
-| lifestyle-tallow.png     | Kourtney, chrome collar, hand to chin (no text)          | alternate |
+| lifestyle-snailmucin.png | Kourtney, chrome bodice, galaxy background (no text)     | Rituals IMG-12 + Nebula page |
+| lifestyle-tallow.png     | Kourtney, chrome collar, hand to chin (no text)          | About IMG-16 + Tallow page |
+| lifestyle-deodorant.png  | Kourtney, arms raised, starfield (no text)               | Contact IMG-18 + Deodorant page |
 | lifestyle-bodyoil.png    | Oil on a shoulder, face cut off (no text)                | alternate |
 | lifestyle-sunbalm.png    | White-haired portrait, painted / illustrated finish (no text) | alternate |
 | outdoor-sunbalm.png      | Kourtney, with the "Natural Sun Harmony" headline and a paragraph of copy | text, unused |

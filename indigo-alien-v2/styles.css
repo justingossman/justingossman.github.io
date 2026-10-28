@@ -400,6 +400,7 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
 .contact-info dt{ font-family:var(--mono); font-size:11px; letter-spacing:0.20em;
   text-transform:uppercase; color:var(--faint); margin-top:26px; }
 .contact-info dd{ margin:8px 0 0; font-family:var(--serif); font-size:20px; color:var(--ink); }
+.contact-grid .slot{ aspect-ratio:4/5; }   /* the frame has no text inside to give it height */
 @media (max-width:800px){ .contact-grid{ grid-template-columns:1fr; } }
 
 /* ============================================================================
