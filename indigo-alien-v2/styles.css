@@ -640,13 +640,13 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
 .pdp-more .pdp-ingr:first-child{ margin-top:0; }
 
 /* ============================================================================
-   PRODUCT PAGE PACKSHOT — cosmic stage (pure CSS)
+   PACKSHOT COSMIC STAGE — product pages (.pdp-shot) and homepage cards (.stage)
    The packshots are transparent WebPs, so no blend mode: the stage paints
    behind them. Each page sets two custom properties on .pdp-shot:
      --tone   r,g,b of the product's glow (gold / violet / deep blue / indigo)
      --floor  how far down the frame the product's base sits, for the shadow
    ============================================================================ */
-.slot.pdp-shot{
+.slot.pdp-shot, .slot.stage{
   --tone:96,66,168; --floor:91.5%;
   background:
     /* nebula glow behind the product */
@@ -661,7 +661,7 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
   background-size:auto,auto,170px 150px,130px 170px,190px 210px,110px 140px,auto;
 }
 /* soft contact shadow + faint tinted reflection on the "floor" under the product */
-.slot.pdp-shot::before{
+.slot.pdp-shot::before, .slot.stage::before{
   content:""; position:absolute; z-index:0; pointer-events:none;
   left:50%; top:var(--floor); width:56%; height:7%;
   transform:translate(-50%,-50%);
@@ -669,15 +669,15 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
     radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,0.65), rgba(0,0,0,0) 100%),
     radial-gradient(50% 30% at 50% 62%, rgba(var(--tone),0.22), rgba(var(--tone),0) 100%);
 }
-.pdp-shot .slot-img{
+.pdp-shot .slot-img, .stage .slot-img{
   transition:filter .6s ease, transform .6s ease;
   filter:drop-shadow(0 0 0 rgba(var(--tone),0));
 }
-.pdp-shot:hover .slot-img{
+.pdp-shot:hover .slot-img, .stage:hover .slot-img, .stage:focus-within .slot-img{
   filter:drop-shadow(0 0 22px rgba(var(--tone),0.38)) brightness(1.04);
   transform:translateY(-0.8%);
 }
 @media (prefers-reduced-motion:reduce){
-  .pdp-shot .slot-img{ transition:none; }
-  .pdp-shot:hover .slot-img{ transform:none; }
+  .pdp-shot .slot-img, .stage .slot-img{ transition:none; }
+  .pdp-shot:hover .slot-img, .stage:hover .slot-img, .stage:focus-within .slot-img{ transform:none; }
 }
