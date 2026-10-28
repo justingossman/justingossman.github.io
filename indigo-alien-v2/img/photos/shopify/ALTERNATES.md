@@ -1,36 +1,46 @@
-# Shopify photos — alternates
+# Shopify photos — what each original shows
 
-The client's Shopify images that aren't on the page yet. All of them are 2000 × 2000 PNGs, except the two packshots, which are 4000 × 4000.
-**These PNGs are not in the repo.** They are in `~/Desktop/kourtneyassets/shopify-originals/`.
-The images the page uses (the `diptych-*.jpg` and `ritual-*.jpg` files) are listed in `../../../PLACEHOLDERS.md`.
+All 19 originals are PNGs in `~/Desktop/kourtneyassets/shopify-originals/`, **not in the repo**.
+They are 2000 × 2000, except the two packshots, which are 4000 × 4000. The JPEGs in this folder,
+and the slots they fill, are listed in `../../../PLACEHOLDERS.md`.
 
-## Ready to use (no baked-in text)
+## Product shots (product on a clean background)
 
-| File                     | What it is                                            | Notes                                     |
-|--------------------------|-------------------------------------------------------|-------------------------------------------|
-| lifestyle-snailmucin.png | Kourtney, chrome bodice, galaxy background            | 4th-best Lifestyle shot; first swap-in for a modeling slot |
-| lifestyle-tallow.png     | Kourtney, chrome collar, hand to chin, galaxy background | Close to snailmucin in look            |
-| lifestyle-bodyoil.png    | Oil on a shoulder, face cut off at the eyes           | Works as a skin-texture macro             |
-| lifestyle-sunbalm.png    | White-haired portrait, painted / illustrated finish   | Very stylized; doesn't match the rest of the set |
+| File                | Shows                                                    | Used? |
+|---------------------|----------------------------------------------------------|-------|
+| product-tallow.png  | Twinkle Whipped Tallow jar, gold lid and spoon, transparent background | IMG-02 |
+| product-sunbalm.png | Two Solar Shield Sun Balm tins, transparent background   | IMG-03 |
 
-## Text printed over the photo
+There are no product shots of Riche Crème, Eye Serum, Cleanser, Snail Mucin Essence or Body Oil.
 
-| File                       | Problem                                                                |
-|----------------------------|------------------------------------------------------------------------|
-| ingredient-eyeserum.png    | Grapefruit macro; benefit copy runs across the middle of the image, so it can't be cropped clean |
-| ingredient-richecreme.png  | Green-tea leaf macro; same problem                                      |
-| outdoor-sunbalm.png        | Kourtney; "Natural Sun Harmony" headline + paragraph                   |
-| outdoor-tallow.png         | Kourtney; "NATURALLY" headline, scan box, two text blocks              |
+## Ingredient cards (headline and benefit copy printed on the photo; not for product slots)
 
-## Packshots (white background, only the product label as text)
+| File                      | Shows                                                    |
+|---------------------------|----------------------------------------------------------|
+| ingredient-tallow.png     | Vanilla beans on navy, captioned "Vanilla Bean". A crop with no text, in black and white, is used for About IMG-17 |
+| ingredient-sunbalm.png    | Raspberries, captioned "Cold-Pressed Red Raspberry Seed Oil" |
+| ingredient-snailmucin.png | Dark glossy bubbles, captioned "Snail Secretion Filtrate (Mucin)" |
+| ingredient-bodyoil.png    | Almonds, **mis-captioned** "Snail Secretion Filtrate (Mucin)" |
+| ingredient-cleanser.png   | Cut aloe leaves, captioned "Aloe Leaf Juice"             |
+| ingredient-eyeserum.png   | Grapefruit, captioned "L-Ascorbic Acid (Vitamin C)"      |
+| ingredient-richecreme.png | Green leaf with a drop, captioned "Green Tea Extract"    |
 
-| File               | What it is                                 |
-|--------------------|--------------------------------------------|
-| product-sunbalm.png | Solar Shield Sun Balm tins (4000 × 4000)   |
-| product-tallow.png  | Twinkle Whipped Tallow jar + spoon (4000 × 4000) |
+## Other product imagery (no text)
 
-## Originals behind the page crops
+| File               | Shows                                       |
+|--------------------|---------------------------------------------|
+| swatch-sunbalm.png | Smear of white balm on glossy deep blue     |
 
-The page uses text-free crops of `ingredient-{bodyoil,sunbalm,snailmucin,tallow,cleanser}.png`
-and `swatch-sunbalm.png`, and scaled-down versions of `lifestyle-{cleanser,eyeserum,richecreme}.png`.
-Those full-size source PNGs are in `~/Desktop/kourtneyassets/shopify-originals/` as well. Each Ingredient PNG still has its text printed on it.
+## Kourtney (Lifestyle / Outdoor)
+
+| File                     | Shows                                                    | Used? |
+|--------------------------|----------------------------------------------------------|-------|
+| lifestyle-cleanser.png   | Kourtney with cleanser foam on her cheek, galaxy background | IMG-13 |
+| lifestyle-eyeserum.png   | Kourtney pressing a sponge to her cheek, galaxy background | IMG-14 |
+| lifestyle-richecreme.png | Kourtney with both hands framing her face, galaxy background | IMG-15 |
+| lifestyle-snailmucin.png | Kourtney, chrome bodice, galaxy background (no text)     | alternate |
+| lifestyle-tallow.png     | Kourtney, chrome collar, hand to chin (no text)          | alternate |
+| lifestyle-bodyoil.png    | Oil on a shoulder, face cut off (no text)                | alternate |
+| lifestyle-sunbalm.png    | White-haired portrait, painted / illustrated finish (no text) | alternate |
+| outdoor-sunbalm.png      | Kourtney, with the "Natural Sun Harmony" headline and a paragraph of copy | text, unused |
+| outdoor-tallow.png       | Kourtney, with the "NATURALLY" headline, a scan box and two text blocks | text, unused |

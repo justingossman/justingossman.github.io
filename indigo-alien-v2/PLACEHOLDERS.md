@@ -1,102 +1,73 @@
 # Indigo Alien Beauty — Image Placeholder Inventory
 
-Every image on the site occupies a labeled `.slot`. As of the **hybrid-fill pass**, no
-slot renders empty — but **nothing here is final**. Every slot still needs real
-photography before any public / marketing use.
+Every image on the site sits in a `.slot`. Each slot is in one of these states:
 
-Two fill strategies are in place:
+- **✓ client photo**: a real client photo is in place.
+- **⚠ original needed**: a client photo is in place, but only at web resolution. The full-resolution original is needed.
+- **◻ placeholder**: no photo yet. The frame shows a plain dark gradient (or an indigo
+  texture on the cosmic slots), with **no visible label**. It is waiting for real photography.
+- **⊘ hidden**: the whole section is hidden (`hidden` attribute) until photos exist.
 
-- **EDITORIAL (11 slots)** — filled with **CSS-only cosmic/macro textures** (layered
-  gradients + grain, no external images). The six diptych textures + the ingredient
-  macro are strictly monochrome; the four colour cosmic slots carry a restrained indigo
-  undertone. These are decorative stand-ins that read as "art direction," not final art.
-- **PRODUCT (3) + MODELING (5)** — filled with **full-colour, full-quality stand-in
-  photos**: six pre-cropped from `~/Desktop/kourtneyassets` into `img/standins/`, plus
-  two client-supplied web-resolution photos of the founder in `img/photos/` (IMG-01
-  hero, IMG-19 founder portrait). No dimming treatment and **no on-page label** — the
-  layout reads as a finished design. These 8 are **temporary stand-ins tracked only in
-  this file**; every one must be replaced with a licensed full-resolution original.
+**Rule (2026-10-28):** the diptych and product slots take only **true product shots**
+(a jar, bottle, tin or tube on a clean background). Ingredient cards and styled renders
+are not used there. If there is no product shot, the slot stays a placeholder.
 
-Types: **PRODUCT** (studio product shot) · **MODELING** (person / on-skin) ·
-**EDITORIAL** (macro nature & cosmic imagery, incl. the monochrome diptych).
+Types: **PRODUCT** (product on a clean background) · **MODELING** (person / on-skin) ·
+**EDITORIAL** (cosmic or ingredient imagery).
 
 | ID     | Page          | Section                        | Type      | Rec. dimensions | Current fill                                   | Status        |
 |--------|---------------|--------------------------------|-----------|-----------------|------------------------------------------------|---------------|
 | IMG-01 | index.html    | Hero                           | MODELING  | 1200 × 1600 px  | Client campaign shot `photos/ia-hero-kourtney.jpg` (web-res) | ⚠ original needed |
-| IMG-02 | index.html    | As Above, So Below — Pair I    | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-bodyoil.jpg` (almonds, 944 × 1180) | ✓ client photo |
-| IMG-03 | index.html    | As Above, So Below — Pair I    | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-sunbalm.jpg` (raspberry, 800 × 1000) | ✓ client photo |
-| IMG-04 | index.html    | As Above, So Below — Pair II   | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-snailmucin.jpg` (bubbles, 896 × 1120) | ✓ client photo |
-| IMG-05 | index.html    | As Above, So Below — Pair II   | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-tallow.jpg` (vanilla, 800 × 1000) | ✓ client photo |
-| IMG-06 | index.html    | As Above, So Below — Pair III  | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-cleanser.jpg` (aloe, 700 × 875) | ✓ client photo |
-| IMG-07 | index.html    | As Above, So Below — Pair III  | EDITORIAL | 1000 × 1250 px  | Shopify `shopify/diptych-swatch.jpg` (Sun Balm swatch, 1000 × 1250) | ✓ client photo |
-| IMG-08 | index.html    | Luminous Offerings             | PRODUCT   | 900 × 1125 px   | Stand-in `standin-img08-product.jpg`           | ⚠ needs photo |
-| IMG-09 | index.html    | Luminous Offerings             | PRODUCT   | 900 × 1125 px   | Stand-in `standin-img09-product.jpg`           | ⚠ needs photo |
-| IMG-10 | index.html    | Luminous Offerings             | PRODUCT   | 900 × 1125 px   | Stand-in `standin-img10-product.jpg`           | ⚠ needs photo |
-| IMG-11 | index.html    | Starseed Ritual Collection     | EDITORIAL | 2400 × 1000 px  | CSS texture `.sx-banner` (indigo). IMG_8124 render rejected — misspelled labels ("SOLAR SMELD SUN BALM" et al.) legible at banner size; crop kept unreferenced at `standins/standin-img11-banner.jpg` | ◑ CSS temp    |
-| IMG-12 | rituals.html  | Intro row                      | EDITORIAL | 2400 × 1200 px  | CSS texture `.sx-ritual` (indigo)              | ◑ CSS temp    |
-| IMG-13 | rituals.html  | The Sequence — Step i          | MODELING  | 900 × 1200 px   | Shopify `shopify/ritual-cleanser.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
-| IMG-14 | rituals.html  | The Sequence — Step ii         | MODELING  | 900 × 1200 px   | Shopify `shopify/ritual-eyeserum.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
-| IMG-15 | rituals.html  | The Sequence — Step iii        | MODELING  | 900 × 1200 px   | Shopify `shopify/ritual-richecreme.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
-| IMG-16 | about.html    | Belief row                     | EDITORIAL | 1600 × 1200 px  | CSS texture `.sx-belief` (indigo)              | ◑ CSS temp    |
-| IMG-17 | about.html    | Practice row                   | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-ingredient` (B&W)             | ◑ CSS temp    |
-| IMG-18 | contact.html  | Contact                        | EDITORIAL | 1200 × 1500 px  | CSS texture `.sx-contact` (indigo)             | ◑ CSS temp    |
+| IMG-02 | index.html    | Diptych — Pair I               | PRODUCT   | 1000 × 1250 px  | `shopify/product-tallow.jpg`: Twinkle Whipped Tallow jar on white | ✓ client photo |
+| IMG-03 | index.html    | Diptych — Pair I               | PRODUCT   | 1000 × 1250 px  | `shopify/product-sunbalm.jpg`: Solar Shield Sun Balm tins on white | ✓ client photo |
+| IMG-04 | index.html    | Diptych — Pair II              | PRODUCT   | 1000 × 1250 px  | none                                           | ◻ placeholder |
+| IMG-05 | index.html    | Diptych — Pair II              | PRODUCT   | 1000 × 1250 px  | none                                           | ◻ placeholder |
+| IMG-06 | index.html    | Diptych — Pair III             | PRODUCT   | 1000 × 1250 px  | none                                           | ◻ placeholder |
+| IMG-07 | index.html    | Diptych — Pair III             | PRODUCT   | 1000 × 1250 px  | none                                           | ◻ placeholder |
+| IMG-08 | index.html    | Luminous Offerings — Riche Crème | PRODUCT | 900 × 1125 px   | none (the old styled render `standin-img08` is no longer used) | ◻ placeholder |
+| IMG-09 | index.html    | Luminous Offerings — Eye Serum | PRODUCT   | 900 × 1125 px   | none (old render `standin-img09` had garbled labels)  | ◻ placeholder |
+| IMG-10 | index.html    | Luminous Offerings — Cleanser  | PRODUCT   | 900 × 1125 px   | none (old render `standin-img10` was 300 px wide with a misspelled label) | ◻ placeholder |
+| IMG-11 | index.html    | Starseed Ritual Collection     | PRODUCT   | 2400 × 1000 px  | Section hidden. Needs product shots of Galactic Oil Cleanser, Starry Eye Serum and Rising Star Riche Crème. The IMG_8124 group render was rejected for misspelled labels ("SOLAR SMELD SUN BALM" et al.) and is kept untracked at `standins/standin-img11-banner.jpg`. | ⊘ hidden |
+| IMG-12 | rituals.html  | Intro row                      | EDITORIAL | 2400 × 1200 px  | CSS texture `.sx-ritual` (indigo), unlabelled  | ◻ placeholder |
+| IMG-13 | rituals.html  | The Sequence — Step i          | MODELING  | 900 × 1200 px   | `shopify/ritual-cleanser.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
+| IMG-14 | rituals.html  | The Sequence — Step ii         | MODELING  | 900 × 1200 px   | `shopify/ritual-eyeserum.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
+| IMG-15 | rituals.html  | The Sequence — Step iii        | MODELING  | 900 × 1200 px   | `shopify/ritual-richecreme.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
+| IMG-16 | about.html    | Belief row                     | EDITORIAL | 1600 × 1200 px  | CSS texture `.sx-belief` (indigo), unlabelled. None of the Shopify images fit. | ◻ placeholder |
+| IMG-17 | about.html    | Practice row (ingredient origin) | EDITORIAL | 1000 × 1250 px | `shopify/about-ingredient-vanilla-bw.jpg`: black-and-white vanilla bean macro, 800 × 1000 | ✓ client photo |
+| IMG-18 | contact.html  | Contact                        | EDITORIAL | 1200 × 1500 px  | CSS texture `.sx-contact` (indigo), unlabelled | ◻ placeholder |
 | IMG-19 | about.html    | Founder row (Meet Kourtney)    | MODELING  | 900 × 1200 px   | Client studio portrait `photos/ia-founder-studio-kourtney.jpg` (web-res) | ⚠ original needed |
-
-Legend — **✓ client photo**: real client photo from the Shopify CDN (see below). **⚠ needs photo**: full-colour temporary stand-in in place (no on-page label),
-must be replaced with a licensed original. **◑ CSS temp**: CSS texture in place; replace
-with final editorial imagery (or keep as intentional texture if art direction approves).
 
 ## Totals
 
-| Type      | Count | Fill                                  |
-|-----------|-------|---------------------------------------|
-| PRODUCT   | 3     | full-colour stand-ins (temporary)     |
-| MODELING  | 5     | 3 Shopify photos + 2 client web-res   |
-| EDITORIAL | 11    | 6 Shopify photos + 5 CSS textures     |
-| **Total** | **19**| 0 empty                               |
-
-## Stand-in provenance (`img/standins/`)
-
-All sourced from `~/Desktop/kourtneyassets`, pre-cropped to remove baked-in text /
-watermarks, rendered at full colour and quality with no overlay. **These are temporary
-placeholders, not licensed final assets — every one must be replaced with a licensed
-original.**
-
-| Stand-in file                | Slot   | Source (kourtneyassets)                         |
-|------------------------------|--------|-------------------------------------------------|
-| standin-img08-product.jpg    | IMG-08 | 70f5fe60… (bottle on amethyst, upper crop)      |
-| standin-img09-product.jpg    | IMG-09 | 70f5fe60… (hexagon product array, lower crop)   |
-| standin-img10-product.jpg    | IMG-10 | 1bdcab39… (dark jar tile, cropped)              |
-| standin-img13-modeling.jpg   | IMG-13 | e03719e2… (serum/dropper panel, cropped)        |
-| standin-img14-modeling.jpg   | IMG-14 | e03719e2… (portrait panel, cropped below text)  |
-| standin-img15-modeling.jpg   | IMG-15 | b878be50… (bio-alchemy still-life panel, cropped)|
+| Status              | Count | Slots                                   |
+|---------------------|-------|-----------------------------------------|
+| ✓ client photo      | 6     | IMG-02, 03, 13, 14, 15, 17              |
+| ⚠ original needed   | 2     | IMG-01, 19                              |
+| ◻ placeholder       | 10    | IMG-04–10, 12, 16, 18                   |
+| ⊘ hidden            | 1     | IMG-11                                  |
 
 ## Shopify photos (`img/photos/shopify/`)
 
 Downloaded 2026-10-28 from the client's Shopify CDN (`cdn.shopify.com/s/files/1/0912/8391/4936/`).
-Only the web JPEGs listed below (quality 85) are in the repo. The 19 PNG originals
-(2000 × 2000; the two packshots are 4000 × 4000) are kept outside the repo in
-`~/Desktop/kourtneyassets/shopify-originals/` and can also be re-downloaded from the CDN.
-Unused images are listed in `img/photos/shopify/ALTERNATES.md`.
+Only the web JPEGs below are in the repo. The 19 PNG originals are kept outside the repo in
+`~/Desktop/kourtneyassets/shopify-originals/`. `img/photos/shopify/ALTERNATES.md`
+describes every original.
 
-The Ingredient PNGs are infographic cards with a headline and benefit copy printed over the
-photo, so each diptych JPEG is a 4:5 crop of an area with no text. Eye Serum and Riche Crème
-have text across the middle and could not be cropped clean. **Client copy error:** the
-Body Oil card (almonds) is captioned "Snail Secretion Filtrate (Mucin)" — flag for the client.
+| File                            | Slot   | Source / treatment                                          |
+|---------------------------------|--------|-------------------------------------------------------------|
+| product-tallow.jpg              | IMG-02 | `product-tallow.png` (4000², transparent background) on white, padded to 1000 × 1250 |
+| product-sunbalm.jpg             | IMG-03 | `product-sunbalm.png` (4000², transparent background) on white, padded to 1000 × 1250 |
+| ritual-cleanser.jpg             | IMG-13 | `lifestyle-cleanser.png`, scaled to 1400 × 1400             |
+| ritual-eyeserum.jpg             | IMG-14 | `lifestyle-eyeserum.png`, scaled to 1400 × 1400             |
+| ritual-richecreme.jpg           | IMG-15 | `lifestyle-richecreme.png`, scaled to 1400 × 1400           |
+| about-ingredient-vanilla-bw.jpg | IMG-17 | `ingredient-tallow.png`: a crop of the vanilla bean with no text, converted to grayscale, 800 × 1000 |
 
-| File                     | Slot   | Source / treatment                                              |
-|--------------------------|--------|-----------------------------------------------------------------|
-| diptych-bodyoil.jpg      | IMG-02 | `ingredient-bodyoil.png`, text-free crop 944 × 1180             |
-| diptych-sunbalm.jpg      | IMG-03 | `ingredient-sunbalm.png`, text-free crop 800 × 1000             |
-| diptych-snailmucin.jpg   | IMG-04 | `ingredient-snailmucin.png`, text-free crop 896 × 1120          |
-| diptych-tallow.jpg       | IMG-05 | `ingredient-tallow.png`, text-free crop 800 × 1000              |
-| diptych-cleanser.jpg     | IMG-06 | `ingredient-cleanser.png`, text-free crop 700 × 875             |
-| diptych-swatch.jpg       | IMG-07 | `swatch-sunbalm.png`, 4:5 crop scaled to 1000 × 1250            |
-| ritual-cleanser.jpg      | IMG-13 | `lifestyle-cleanser.png`, scaled to 1400 × 1400                 |
-| ritual-eyeserum.jpg      | IMG-14 | `lifestyle-eyeserum.png`, scaled to 1400 × 1400                 |
-| ritual-richecreme.jpg    | IMG-15 | `lifestyle-richecreme.png`, scaled to 1400 × 1400               |
+**Ingredient cards are not used in the product slots.** Each one has a headline and benefit
+copy printed over the photo. The benefit copy would be unreadable in a small "What's inside"
+strip, so there is no such strip. **Client copy error:** the Body Oil card (almonds) is
+captioned "Snail Secretion Filtrate (Mucin)". Flag it for the client.
 
-The old stand-ins `standins/standin-img13/14/15-modeling.jpg` are no longer referenced; they are kept on disk.
+The old stand-ins in `img/standins/` (img08/09/10/13/14/15) are no longer referenced. They are kept on disk.
 
 ## Client-supplied photos (`img/photos/`)
 
@@ -128,13 +99,13 @@ with the designer's original vector / transparent PNG** for print and Shopify.
 
 ## To reach final
 
-1. **Product (IMG-08/09/10):** shoot the three SKUs (Rising Star Riche Crème, Starry Eye
-   Serum, Galactic Oil Cleanser) at 900 × 1125, then drop into `img/products/` and swap
-   the `<img src>` + remove the `slot--standin` class.
-2. **Modeling (IMG-01/13/14/15/19):** hero, three on-skin ritual gestures, founder portrait — full-res originals of the two client shots, plus real photography for the ritual steps.
-3. **Editorial (IMG-02–07, 11, 12, 16, 17, 18):** real B&W macro pairs (neuron/galaxy,
-   iris/nebula, roots/vessels), ingredient macro, and the colour cosmic features — or
-   keep the CSS textures if approved. To swap: remove the `.sx-*` class and add an `<img>`.
+1. **Product shots needed:** Rising Star Riche Crème (IMG-08), Starry Eye Serum (IMG-09) and Galactic
+   Oil Cleanser (IMG-10), each on a clean background. These three also unlock the hidden
+   Starseed banner (IMG-11). The diptych needs four more product shots (IMG-04–07). Snail Mucin
+   Essence and Manuka Honey & Sea Moss Body Oil are the obvious next pair. To fill a placeholder,
+   add `<img class="slot-img" …>` inside the slot and the `slot--standin` class.
+2. **Modeling (IMG-01/19):** full-res originals of the two client shots.
+3. **Editorial (IMG-12, 16, 18):** colour cosmic features, or keep the CSS textures if approved.
 
 ### Breakdown by page
 - **index.html** — 11 (IMG-01 … IMG-11)
