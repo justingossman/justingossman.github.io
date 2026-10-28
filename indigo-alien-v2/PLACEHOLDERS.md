@@ -23,26 +23,26 @@ Types: **PRODUCT** (studio product shot) · **MODELING** (person / on-skin) ·
 | ID     | Page          | Section                        | Type      | Rec. dimensions | Current fill                                   | Status        |
 |--------|---------------|--------------------------------|-----------|-----------------|------------------------------------------------|---------------|
 | IMG-01 | index.html    | Hero                           | MODELING  | 1200 × 1600 px  | Client campaign shot `photos/ia-hero-kourtney.jpg` (web-res) | ⚠ original needed |
-| IMG-02 | index.html    | As Above, So Below — Pair I    | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-neuron` (B&W)                 | ◑ CSS temp    |
-| IMG-03 | index.html    | As Above, So Below — Pair I    | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-galaxy` (B&W, mirrors 02)     | ◑ CSS temp    |
-| IMG-04 | index.html    | As Above, So Below — Pair II   | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-iris` (B&W)                    | ◑ CSS temp    |
-| IMG-05 | index.html    | As Above, So Below — Pair II   | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-nebula` (B&W, mirrors 04)     | ◑ CSS temp    |
-| IMG-06 | index.html    | As Above, So Below — Pair III  | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-roots` (B&W)                   | ◑ CSS temp    |
-| IMG-07 | index.html    | As Above, So Below — Pair III  | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-vessels` (B&W, mirrors 06)    | ◑ CSS temp    |
+| IMG-02 | index.html    | As Above, So Below — Pair I    | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-bodyoil.jpg` (almonds, 944 × 1180) | ✓ client photo |
+| IMG-03 | index.html    | As Above, So Below — Pair I    | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-sunbalm.jpg` (raspberry, 800 × 1000) | ✓ client photo |
+| IMG-04 | index.html    | As Above, So Below — Pair II   | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-snailmucin.jpg` (bubbles, 896 × 1120) | ✓ client photo |
+| IMG-05 | index.html    | As Above, So Below — Pair II   | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-tallow.jpg` (vanilla, 800 × 1000) | ✓ client photo |
+| IMG-06 | index.html    | As Above, So Below — Pair III  | EDITORIAL | 1000 × 1250 px  | Shopify crop `shopify/diptych-cleanser.jpg` (aloe, 700 × 875) | ✓ client photo |
+| IMG-07 | index.html    | As Above, So Below — Pair III  | EDITORIAL | 1000 × 1250 px  | Shopify `shopify/diptych-swatch.jpg` (Sun Balm swatch, 1000 × 1250) | ✓ client photo |
 | IMG-08 | index.html    | Luminous Offerings             | PRODUCT   | 900 × 1125 px   | Stand-in `standin-img08-product.jpg`           | ⚠ needs photo |
 | IMG-09 | index.html    | Luminous Offerings             | PRODUCT   | 900 × 1125 px   | Stand-in `standin-img09-product.jpg`           | ⚠ needs photo |
 | IMG-10 | index.html    | Luminous Offerings             | PRODUCT   | 900 × 1125 px   | Stand-in `standin-img10-product.jpg`           | ⚠ needs photo |
 | IMG-11 | index.html    | Starseed Ritual Collection     | EDITORIAL | 2400 × 1000 px  | CSS texture `.sx-banner` (indigo). IMG_8124 render rejected — misspelled labels ("SOLAR SMELD SUN BALM" et al.) legible at banner size; crop kept unreferenced at `standins/standin-img11-banner.jpg` | ◑ CSS temp    |
 | IMG-12 | rituals.html  | Intro row                      | EDITORIAL | 2400 × 1200 px  | CSS texture `.sx-ritual` (indigo)              | ◑ CSS temp    |
-| IMG-13 | rituals.html  | The Sequence — Step i          | MODELING  | 900 × 1200 px   | Stand-in `standin-img13-modeling.jpg`          | ⚠ needs photo |
-| IMG-14 | rituals.html  | The Sequence — Step ii         | MODELING  | 900 × 1200 px   | Stand-in `standin-img14-modeling.jpg`          | ⚠ needs photo |
-| IMG-15 | rituals.html  | The Sequence — Step iii        | MODELING  | 900 × 1200 px   | Stand-in `standin-img15-modeling.jpg`          | ⚠ needs photo |
+| IMG-13 | rituals.html  | The Sequence — Step i          | MODELING  | 900 × 1200 px   | Shopify `shopify/ritual-cleanser.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
+| IMG-14 | rituals.html  | The Sequence — Step ii         | MODELING  | 900 × 1200 px   | Shopify `shopify/ritual-eyeserum.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
+| IMG-15 | rituals.html  | The Sequence — Step iii        | MODELING  | 900 × 1200 px   | Shopify `shopify/ritual-richecreme.jpg` (Kourtney, 1400 × 1400) | ✓ client photo |
 | IMG-16 | about.html    | Belief row                     | EDITORIAL | 1600 × 1200 px  | CSS texture `.sx-belief` (indigo)              | ◑ CSS temp    |
 | IMG-17 | about.html    | Practice row                   | EDITORIAL | 1000 × 1250 px  | CSS texture `.sx-ingredient` (B&W)             | ◑ CSS temp    |
 | IMG-18 | contact.html  | Contact                        | EDITORIAL | 1200 × 1500 px  | CSS texture `.sx-contact` (indigo)             | ◑ CSS temp    |
 | IMG-19 | about.html    | Founder row (Meet Kourtney)    | MODELING  | 900 × 1200 px   | Client studio portrait `photos/ia-founder-studio-kourtney.jpg` (web-res) | ⚠ original needed |
 
-Legend — **⚠ needs photo**: full-colour temporary stand-in in place (no on-page label),
+Legend — **✓ client photo**: real client photo from the Shopify CDN (see below). **⚠ needs photo**: full-colour temporary stand-in in place (no on-page label),
 must be replaced with a licensed original. **◑ CSS temp**: CSS texture in place; replace
 with final editorial imagery (or keep as intentional texture if art direction approves).
 
@@ -51,8 +51,8 @@ with final editorial imagery (or keep as intentional texture if art direction ap
 | Type      | Count | Fill                                  |
 |-----------|-------|---------------------------------------|
 | PRODUCT   | 3     | full-colour stand-ins (temporary)     |
-| MODELING  | 5     | full-colour stand-ins (temporary)     |
-| EDITORIAL | 11    | CSS textures                          |
+| MODELING  | 5     | 3 Shopify photos + 2 client web-res   |
+| EDITORIAL | 11    | 6 Shopify photos + 5 CSS textures     |
 | **Total** | **19**| 0 empty                               |
 
 ## Stand-in provenance (`img/standins/`)
@@ -70,6 +70,33 @@ original.**
 | standin-img13-modeling.jpg   | IMG-13 | e03719e2… (serum/dropper panel, cropped)        |
 | standin-img14-modeling.jpg   | IMG-14 | e03719e2… (portrait panel, cropped below text)  |
 | standin-img15-modeling.jpg   | IMG-15 | b878be50… (bio-alchemy still-life panel, cropped)|
+
+## Shopify photos (`img/photos/shopify/`)
+
+Downloaded 2026-10-28 from the client's Shopify CDN (`cdn.shopify.com/s/files/1/0912/8391/4936/`).
+Only the web JPEGs listed below (quality 85) are in the repo. The 19 PNG originals
+(2000 × 2000; the two packshots are 4000 × 4000) are kept outside the repo in
+`~/Desktop/kourtneyassets/shopify-originals/` and can also be re-downloaded from the CDN.
+Unused images are listed in `img/photos/shopify/ALTERNATES.md`.
+
+The Ingredient PNGs are infographic cards with a headline and benefit copy printed over the
+photo, so each diptych JPEG is a 4:5 crop of an area with no text. Eye Serum and Riche Crème
+have text across the middle and could not be cropped clean. **Client copy error:** the
+Body Oil card (almonds) is captioned "Snail Secretion Filtrate (Mucin)" — flag for the client.
+
+| File                     | Slot   | Source / treatment                                              |
+|--------------------------|--------|-----------------------------------------------------------------|
+| diptych-bodyoil.jpg      | IMG-02 | `ingredient-bodyoil.png`, text-free crop 944 × 1180             |
+| diptych-sunbalm.jpg      | IMG-03 | `ingredient-sunbalm.png`, text-free crop 800 × 1000             |
+| diptych-snailmucin.jpg   | IMG-04 | `ingredient-snailmucin.png`, text-free crop 896 × 1120          |
+| diptych-tallow.jpg       | IMG-05 | `ingredient-tallow.png`, text-free crop 800 × 1000              |
+| diptych-cleanser.jpg     | IMG-06 | `ingredient-cleanser.png`, text-free crop 700 × 875             |
+| diptych-swatch.jpg       | IMG-07 | `swatch-sunbalm.png`, 4:5 crop scaled to 1000 × 1250            |
+| ritual-cleanser.jpg      | IMG-13 | `lifestyle-cleanser.png`, scaled to 1400 × 1400                 |
+| ritual-eyeserum.jpg      | IMG-14 | `lifestyle-eyeserum.png`, scaled to 1400 × 1400                 |
+| ritual-richecreme.jpg    | IMG-15 | `lifestyle-richecreme.png`, scaled to 1400 × 1400               |
+
+The old stand-ins `standins/standin-img13/14/15-modeling.jpg` are no longer referenced; they are kept on disk.
 
 ## Client-supplied photos (`img/photos/`)
 
