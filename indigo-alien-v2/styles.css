@@ -596,3 +596,44 @@ h1,h2,h3,h4{ font-family:var(--serif); font-weight:300; margin:0; letter-spacing
   .look-strip{ overflow-x:visible; }
   .look-slot{ flex:1; }
 }
+
+/* ============================================================================
+   PRODUCT PAGES (products/<slug>.html) — mobile-first
+   Packshot on the dark studio slot, then name / price / description / buy.
+   From 900px the packshot and the info column sit side by side, the info
+   column sticky under the header.
+   ============================================================================ */
+.pdp{ padding-top:clamp(28px,6vw,70px); padding-bottom:clamp(50px,8vw,100px); }
+.crumbs a{ color:var(--muted); transition:color .25s ease; }
+.crumbs a:hover{ color:var(--ink); }
+.pdp-top{ display:grid; gap:28px; margin-top:22px; }
+.pdp-shot{ aspect-ratio:4/5; }
+.pdp-info h1{ font-size:clamp(38px,9vw,80px); line-height:0.98; }
+.pdp-price{ font-family:var(--mono); font-size:15px; letter-spacing:0.08em; margin:18px 0 0; }
+.pdp-desc p{ color:var(--muted); max-width:52ch; margin:22px 0 0; }
+.pdp-includes{ list-style:none; padding:0; margin:14px 0 0; display:grid; gap:12px; }
+.pdp-includes-head{ margin-top:28px; }
+.pdp-buy{ display:block; text-align:center; margin-top:32px; }
+@media (min-width:900px){
+  .pdp-top{ grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);
+    gap:clamp(40px,5vw,80px); align-items:start; }
+  .pdp-info{ position:sticky; top:110px; }
+  .pdp-buy{ display:inline-block; }
+}
+/* why you'll love it — key ingredients */
+.pdp-why{ padding-top:0; }
+.pdp-why-list{ list-style:none; padding:0; margin:0; display:grid; }
+.pdp-why-list li{ border-top:1px solid var(--line); padding:22px 0; }
+.pdp-why-list h3{ font-size:22px; line-height:1.1; }
+.pdp-why-list p{ color:var(--muted); margin:8px 0 0; max-width:60ch; }
+@media (min-width:900px){
+  .pdp-why-list{ grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:clamp(30px,4vw,60px); }
+}
+/* how to use + full ingredients, beside the lifestyle shot when there is one */
+.pdp-more{ padding-bottom:clamp(60px,9vw,120px); }
+.pdp-more .row2{ padding-top:0; align-items:start; }
+.pdp-more .row2-copy h2 + p{ font-family:var(--serif); font-style:italic; font-size:clamp(18px,1.8vw,22px);
+  line-height:1.45; color:var(--ink); }
+.pdp-ingr{ margin-top:36px; }
+.pdp-ingr p{ font-size:13px; line-height:1.75; color:var(--faint); max-width:70ch; margin:12px 0 0; }
+.pdp-more .pdp-ingr:first-child{ margin-top:0; }

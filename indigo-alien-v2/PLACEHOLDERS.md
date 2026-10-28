@@ -126,3 +126,31 @@ with the designer's original vector / transparent PNG** for print and Shopify.
 - **rituals.html** — 4 (IMG-12 … IMG-15)
 - **about.html** — 3 (IMG-16, IMG-17, IMG-19)
 - **contact.html** — 1 (IMG-18)
+
+## Product pages (`products/<slug>.html`)
+
+Nine pages, one per product shown on index.html. The text was copied read-only from each
+product's Shopify admin page on 2026-10-28:
+
+| On the page        | Shopify admin field                                              |
+|--------------------|------------------------------------------------------------------|
+| Name, price        | Title, Price                                                     |
+| Description        | Description (rich text)                                          |
+| Why you’ll love it | **Key Ingredient** metafield. There's no "Why you'll love it" text field; the "…Why_you_will_love_it.png" cards in Files paraphrase Key Ingredient. |
+| How to use         | **Ritual** metafield. The "How to use" metafield is empty on every product. |
+| Full ingredients   | Full Ingredients metafield                                       |
+| Buy button         | `https://indigoalienbeauty.com/products/<Shopify handle>`        |
+
+Shopify has **no Ritual / how-to text** for Twinkle Whipped Tallow, Solar Shield Sun Balm,
+Celestial Silk After Shave Body Oil, Transcendent Tallow Deodorant or The Purity & Radiance
+Ritual, so those pages have no "How to use" section.
+
+Lifestyle shots: only files whose Shopify name credits Kourtney are used: Riche Crème, Eye
+Serum and Cleanser (`ritual-*.jpg`), and Nebula Mucin, Twinkle Tallow and Deodorant
+(`lifestyle-*.jpg`). Sun Balm and Body Oil have lifestyle images that aren't credited to her,
+and the bundle has none, so those three pages have no lifestyle shot.
+
+Data issues to raise with the client: the Body Oil's Shopify title and handle say "Celestical"
+(the site shows "Celestial"; the buy link has to use the real handle). The Purity & Radiance
+Ritual's one-liner is copied from Starry Eye Serum ("Awaken the Starlight Within Your Gaze."),
+so it isn't used on the site.
