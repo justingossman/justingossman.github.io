@@ -72,6 +72,9 @@ product, so there's no white box.
 | ritual-cleanser.jpg                 | IMG-13 | `lifestyle-cleanser.png`, scaled to 1400 × 1400         |
 | ritual-eyeserum.jpg                 | IMG-14 | `lifestyle-eyeserum.png`, scaled to 1400 × 1400         |
 | ritual-richecreme.jpg               | IMG-15 | `lifestyle-richecreme.png`, scaled to 1400 × 1400       |
+| product-set-starseed-daily.webp     | Shopify theme only | `MustHaveDaily_….png` (4000²), downloaded 2026-10-30 |
+| product-set-celestial-trinity.webp  | Shopify theme only | `TripleFightingProtection.png` (4000²), downloaded 2026-10-30 |
+| product-set-luminous-hydration.webp | Shopify theme only | `FullMoistureSet.png` (4000²), downloaded 2026-10-30 |
 | about-ingredient-vanilla-bw.jpg     | IMG-17 | `ingredient-tallow.png`: a crop of the vanilla bean with no text, converted to grayscale, 800 × 1000 |
 
 **Names to confirm with the client:** the Shopify product is titled "Celestical Silk After
@@ -120,6 +123,10 @@ with the designer's original vector / transparent PNG** for print and Shopify.
    composition is approved. Remove `hidden` on the section to restore it.
 2. **Modeling (IMG-01/19):** full-res originals of the two client shots.
 3. **IMG-12, 16, 18** now use Kourtney lifestyle shots that also appear on product pages. Swap them for photos used nowhere else when new shoots arrive.
+4. **Limited-run detail line (index.html §7), placeholder copy:** "Serial No: A10078 / Phase: New
+   Moon / 1 of 150". It is removed from the Shopify preview theme and stays out unless Kourtney
+   confirms she wants numbered limited batches (then she supplies the real serial, phase and run
+   size). It is still on this static mockup.
 
 ### Breakdown by page
 - **index.html** — 11 (IMG-01 … IMG-11)
@@ -137,7 +144,7 @@ product's Shopify admin page on 2026-10-28:
 | Name, price        | Title, Price                                                     |
 | Description        | Description (rich text)                                          |
 | Why you’ll love it | **Key Ingredient** metafield. There's no "Why you'll love it" text field; the "…Why_you_will_love_it.png" cards in Files paraphrase Key Ingredient. |
-| How to use         | **Ritual** metafield. The "How to use" metafield is empty on every product. |
+| How to use         | **Ritual** metafield on this static mockup. Correction (2026-10-30): the "How to use" metafield is a metaobject reference, not empty. Its `content` field has how-to text on all 12 products, and the Shopify preview theme shows that text. |
 | Full ingredients   | Full Ingredients metafield                                       |
 | Buy button         | `https://indigoalienbeauty.com/products/<Shopify handle>`        |
 
